@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Исходный файл freemodbus-v1.5.0/modbus/include/mbport.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_0c75cef0ba1e20c657ed8321c6ec6c7a.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">mbport.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mbport_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (c) 2006 Christian Walter &lt;wolti@sil.at&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * are met:</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * 1. Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    notice, this list of conditions and the following disclaimer in the</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    documentation and/or other materials provided with the distribution.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * 3. The name of the author may not be used to endorse or promote products</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    derived from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> * File: $Id: mbport.h,v 1.19 2010/06/06 13:54:40 wolti Exp $</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef _MB_PORT_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define _MB_PORT_H</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>PR_BEGIN_EXTERN_C</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/* ----------------------- Type definitions ---------------------------------*/</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="mbport_8h.html#a208845596909620aa0062468ff11ef02">   40</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="mbport_8h.html#a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0">   42</a></span>    <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0">EV_READY</a>,                   </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="mbport_8h.html#a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2">   43</a></span>    <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2">EV_FRAME_RECEIVED</a>,          </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="mbport_8h.html#a208845596909620aa0062468ff11ef02ab8e9ebe43ab8ce27e6e48c46f57d9019">   44</a></span>    <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02ab8e9ebe43ab8ce27e6e48c46f57d9019">EV_EXECUTE</a>,                 </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95">EV_FRAME_SENT</a>               </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="mbport_8h.html#a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95">   46</a></span>} <a class="code hl_enumeration" href="mbport_8h.html#a208845596909620aa0062468ff11ef02">eMBEventType</a>;</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">   55</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba36c1b70b68bc05d618632e3f975a557b">   57</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba36c1b70b68bc05d618632e3f975a557b">MB_PAR_NONE</a>,                </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba955fa6c30334314739ddceed6e749316">   58</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba955fa6c30334314739ddceed6e749316">MB_PAR_ODD</a>,                 </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_enumvalue" href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba0415f4c7ede57e13a0cca698a8375dbd">MB_PAR_EVEN</a>                 </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba0415f4c7ede57e13a0cca698a8375dbd">   60</a></span>} <a class="code hl_enumeration" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a>;</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">/* ----------------------- Supporting functions -----------------------------*/</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="mbport_8h.html#a23aa6afd41597f7aaf5d1a6e6831c718">   63</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a23aa6afd41597f7aaf5d1a6e6831c718">xMBPortEventInit</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">   65</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">xMBPortEventPost</a>( <a class="code hl_enumeration" href="mbport_8h.html#a208845596909620aa0062468ff11ef02">eMBEventType</a> eEvent );</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="mbport_8h.html#ad61d350e63d0c41e7563ac0bc0fd346f">   67</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#ad61d350e63d0c41e7563ac0bc0fd346f">xMBPortEventGet</a>(  <span class="comment">/*@out@ */</span> <a class="code hl_enumeration" href="mbport_8h.html#a208845596909620aa0062468ff11ef02">eMBEventType</a> * eEvent );</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/* ----------------------- Serial port functions ----------------------------*/</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="mbport_8h.html#af614e62c57eaba86f45c45e5d0e6cfd9">   71</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#af614e62c57eaba86f45c45e5d0e6cfd9">xMBPortSerialInit</a>( UCHAR ucPort, ULONG ulBaudRate,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                                   UCHAR ucDataBits, <a class="code hl_enumeration" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a> eParity );</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="mbport_8h.html#ae97991ffb6ce01584afce5dd4f653b41">   74</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#ae97991ffb6ce01584afce5dd4f653b41">vMBPortClose</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="mbport_8h.html#a9f5987b97b1075363db05a6783bd1103">   76</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a9f5987b97b1075363db05a6783bd1103">xMBPortSerialClose</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">   78</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a>( BOOL xRxEnable, BOOL xTxEnable );</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="mbport_8h.html#a4a4724e9dc26b2d2d1cc2a6d41c24770">   80</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a4a4724e9dc26b2d2d1cc2a6d41c24770">xMBPortSerialGetByte</a>( CHAR * pucByte );</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="mbport_8h.html#a5ca95563c25eb239a4c51f3ce35f5cc8">   82</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a5ca95563c25eb239a4c51f3ce35f5cc8">xMBPortSerialPutByte</a>( CHAR ucByte );</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">/* ----------------------- Timers functions ---------------------------------*/</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="mbport_8h.html#a93d8e78fe43e66fab707da6eda4f5eaf">   85</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a93d8e78fe43e66fab707da6eda4f5eaf">xMBPortTimersInit</a>( USHORT usTimeOut50us );</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="mbport_8h.html#a7a7591ccc79c9423e5c1821d3fd826d1">   87</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a7a7591ccc79c9423e5c1821d3fd826d1">xMBPortTimersClose</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">   89</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523">   91</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523">vMBPortTimersDisable</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="mbport_8h.html#a334f66a0527a862f58488cc40d7999d4">   93</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a334f66a0527a862f58488cc40d7999d4">vMBPortTimersDelay</a>( USHORT usTimeOutMS );</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">/* ----------------------- Callback for the protocol stack ------------------*/</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="keyword">extern</span>          BOOL( *<a class="code hl_variable" href="mbport_8h.html#a6ff9d563210c04e3afb414b9db75154a">pxMBFrameCBByteReceived</a> ) ( void );</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keyword">extern</span>          BOOL( *<a class="code hl_variable" href="mbport_8h.html#a46ac9d979eaaeb885415014a0cb350b2">pxMBFrameCBTransmitterEmpty</a> ) ( void );</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="keyword">extern</span>          BOOL( *<a class="code hl_variable" href="mbport_8h.html#a3ca010d1cf1b3bda066f0d65641d9055">pxMBPortCBTimerExpired</a> ) ( void );</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">/* ----------------------- TCP port functions -------------------------------*/</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="mbport_8h.html#a793d6e53b5632f4075af872b6a5c8ca5">  116</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a793d6e53b5632f4075af872b6a5c8ca5">xMBTCPPortInit</a>( USHORT usTCPPort );</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="mbport_8h.html#a8c43e5231c42bb7b8c6a31f8bfcb8a3e">  118</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a8c43e5231c42bb7b8c6a31f8bfcb8a3e">vMBTCPPortClose</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="mbport_8h.html#a2ea2cd5d0cb31ce90df6e46d7af29d8d">  120</a></span><span class="keywordtype">void</span>            <a class="code hl_function" href="mbport_8h.html#a2ea2cd5d0cb31ce90df6e46d7af29d8d">vMBTCPPortDisable</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="mbport_8h.html#a770c9a4001e08aafec96234e51ac8f42">  122</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a770c9a4001e08aafec96234e51ac8f42">xMBTCPPortGetRequest</a>( UCHAR **ppucMBTCPFrame, USHORT * usTCPLength );</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="mbport_8h.html#a2902b52c4070bd676851561caef5a4c5">  124</a></span>BOOL            <a class="code hl_function" href="mbport_8h.html#a2902b52c4070bd676851561caef5a4c5">xMBTCPPortSendResponse</a>( <span class="keyword">const</span> UCHAR *pucMBTCPFrame, USHORT usTCPLength );</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>PR_END_EXTERN_C</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__modbus_html_ga16ba85fa56bcd52a11a12576af445ccb"><div class="ttname"><a href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a></div><div class="ttdeci">eMBParity</div><div class="ttdoc">Parity used for characters in serial mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">mbport.h:56</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga16ba85fa56bcd52a11a12576af445ccba0415f4c7ede57e13a0cca698a8375dbd"><div class="ttname"><a href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba0415f4c7ede57e13a0cca698a8375dbd">MB_PAR_EVEN</a></div><div class="ttdeci">@ MB_PAR_EVEN</div><div class="ttdef"><b>Definition</b> <a href="#l00060">mbport.h:59</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga16ba85fa56bcd52a11a12576af445ccba36c1b70b68bc05d618632e3f975a557b"><div class="ttname"><a href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba36c1b70b68bc05d618632e3f975a557b">MB_PAR_NONE</a></div><div class="ttdeci">@ MB_PAR_NONE</div><div class="ttdef"><b>Definition</b> <a href="#l00057">mbport.h:57</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga16ba85fa56bcd52a11a12576af445ccba955fa6c30334314739ddceed6e749316"><div class="ttname"><a href="group__modbus.html#gga16ba85fa56bcd52a11a12576af445ccba955fa6c30334314739ddceed6e749316">MB_PAR_ODD</a></div><div class="ttdeci">@ MB_PAR_ODD</div><div class="ttdef"><b>Definition</b> <a href="#l00058">mbport.h:58</a></div></div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02">eMBEventType</a></div><div class="ttdeci">eMBEventType</div><div class="ttdef"><b>Definition</b> <a href="#l00040">mbport.h:41</a></div></div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0">EV_READY</a></div><div class="ttdeci">@ EV_READY</div><div class="ttdef"><b>Definition</b> <a href="#l00042">mbport.h:42</a></div></div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2">EV_FRAME_RECEIVED</a></div><div class="ttdeci">@ EV_FRAME_RECEIVED</div><div class="ttdef"><b>Definition</b> <a href="#l00043">mbport.h:43</a></div></div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02ab8e9ebe43ab8ce27e6e48c46f57d9019"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02ab8e9ebe43ab8ce27e6e48c46f57d9019">EV_EXECUTE</a></div><div class="ttdeci">@ EV_EXECUTE</div><div class="ttdef"><b>Definition</b> <a href="#l00044">mbport.h:44</a></div></div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95">EV_FRAME_SENT</a></div><div class="ttdeci">@ EV_FRAME_SENT</div><div class="ttdef"><b>Definition</b> <a href="#l00046">mbport.h:45</a></div></div>
+<div class="ttc" id="ambport_8h_html_a2356d0d397b3da961b86cabddb9a9760"><div class="ttname"><a href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a></div><div class="ttdeci">void vMBPortTimersEnable(void)</div></div>
+<div class="ttc" id="ambport_8h_html_a23aa6afd41597f7aaf5d1a6e6831c718"><div class="ttname"><a href="mbport_8h.html#a23aa6afd41597f7aaf5d1a6e6831c718">xMBPortEventInit</a></div><div class="ttdeci">BOOL xMBPortEventInit(void)</div></div>
+<div class="ttc" id="ambport_8h_html_a2902b52c4070bd676851561caef5a4c5"><div class="ttname"><a href="mbport_8h.html#a2902b52c4070bd676851561caef5a4c5">xMBTCPPortSendResponse</a></div><div class="ttdeci">BOOL xMBTCPPortSendResponse(const UCHAR *pucMBTCPFrame, USHORT usTCPLength)</div></div>
+<div class="ttc" id="ambport_8h_html_a2cdfe42cd5ee37d5839081c636576e7c"><div class="ttname"><a href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">xMBPortEventPost</a></div><div class="ttdeci">BOOL xMBPortEventPost(eMBEventType eEvent)</div></div>
+<div class="ttc" id="ambport_8h_html_a2ea2cd5d0cb31ce90df6e46d7af29d8d"><div class="ttname"><a href="mbport_8h.html#a2ea2cd5d0cb31ce90df6e46d7af29d8d">vMBTCPPortDisable</a></div><div class="ttdeci">void vMBTCPPortDisable(void)</div></div>
+<div class="ttc" id="ambport_8h_html_a334f66a0527a862f58488cc40d7999d4"><div class="ttname"><a href="mbport_8h.html#a334f66a0527a862f58488cc40d7999d4">vMBPortTimersDelay</a></div><div class="ttdeci">void vMBPortTimersDelay(USHORT usTimeOutMS)</div></div>
+<div class="ttc" id="ambport_8h_html_a3ca010d1cf1b3bda066f0d65641d9055"><div class="ttname"><a href="mbport_8h.html#a3ca010d1cf1b3bda066f0d65641d9055">pxMBPortCBTimerExpired</a></div><div class="ttdeci">BOOL(* pxMBPortCBTimerExpired)(void)</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00087">mb.c:87</a></div></div>
+<div class="ttc" id="ambport_8h_html_a46ac9d979eaaeb885415014a0cb350b2"><div class="ttname"><a href="mbport_8h.html#a46ac9d979eaaeb885415014a0cb350b2">pxMBFrameCBTransmitterEmpty</a></div><div class="ttdeci">BOOL(* pxMBFrameCBTransmitterEmpty)(void)</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00086">mb.c:86</a></div></div>
+<div class="ttc" id="ambport_8h_html_a4a4724e9dc26b2d2d1cc2a6d41c24770"><div class="ttname"><a href="mbport_8h.html#a4a4724e9dc26b2d2d1cc2a6d41c24770">xMBPortSerialGetByte</a></div><div class="ttdeci">BOOL xMBPortSerialGetByte(CHAR *pucByte)</div></div>
+<div class="ttc" id="ambport_8h_html_a4bf68bda6b5ed6c341d27d439a6c03df"><div class="ttname"><a href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a></div><div class="ttdeci">void vMBPortSerialEnable(BOOL xRxEnable, BOOL xTxEnable)</div></div>
+<div class="ttc" id="ambport_8h_html_a5ca95563c25eb239a4c51f3ce35f5cc8"><div class="ttname"><a href="mbport_8h.html#a5ca95563c25eb239a4c51f3ce35f5cc8">xMBPortSerialPutByte</a></div><div class="ttdeci">BOOL xMBPortSerialPutByte(CHAR ucByte)</div></div>
+<div class="ttc" id="ambport_8h_html_a6ff9d563210c04e3afb414b9db75154a"><div class="ttname"><a href="mbport_8h.html#a6ff9d563210c04e3afb414b9db75154a">pxMBFrameCBByteReceived</a></div><div class="ttdeci">BOOL(* pxMBFrameCBByteReceived)(void)</div><div class="ttdoc">Callback function for the porting layer when a new byte is available.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00085">mb.c:85</a></div></div>
+<div class="ttc" id="ambport_8h_html_a770c9a4001e08aafec96234e51ac8f42"><div class="ttname"><a href="mbport_8h.html#a770c9a4001e08aafec96234e51ac8f42">xMBTCPPortGetRequest</a></div><div class="ttdeci">BOOL xMBTCPPortGetRequest(UCHAR **ppucMBTCPFrame, USHORT *usTCPLength)</div></div>
+<div class="ttc" id="ambport_8h_html_a793d6e53b5632f4075af872b6a5c8ca5"><div class="ttname"><a href="mbport_8h.html#a793d6e53b5632f4075af872b6a5c8ca5">xMBTCPPortInit</a></div><div class="ttdeci">BOOL xMBTCPPortInit(USHORT usTCPPort)</div></div>
+<div class="ttc" id="ambport_8h_html_a7a7591ccc79c9423e5c1821d3fd826d1"><div class="ttname"><a href="mbport_8h.html#a7a7591ccc79c9423e5c1821d3fd826d1">xMBPortTimersClose</a></div><div class="ttdeci">void xMBPortTimersClose(void)</div></div>
+<div class="ttc" id="ambport_8h_html_a8c43e5231c42bb7b8c6a31f8bfcb8a3e"><div class="ttname"><a href="mbport_8h.html#a8c43e5231c42bb7b8c6a31f8bfcb8a3e">vMBTCPPortClose</a></div><div class="ttdeci">void vMBTCPPortClose(void)</div></div>
+<div class="ttc" id="ambport_8h_html_a93d8e78fe43e66fab707da6eda4f5eaf"><div class="ttname"><a href="mbport_8h.html#a93d8e78fe43e66fab707da6eda4f5eaf">xMBPortTimersInit</a></div><div class="ttdeci">BOOL xMBPortTimersInit(USHORT usTimeOut50us)</div></div>
+<div class="ttc" id="ambport_8h_html_a9f5987b97b1075363db05a6783bd1103"><div class="ttname"><a href="mbport_8h.html#a9f5987b97b1075363db05a6783bd1103">xMBPortSerialClose</a></div><div class="ttdeci">void xMBPortSerialClose(void)</div></div>
+<div class="ttc" id="ambport_8h_html_ad61d350e63d0c41e7563ac0bc0fd346f"><div class="ttname"><a href="mbport_8h.html#ad61d350e63d0c41e7563ac0bc0fd346f">xMBPortEventGet</a></div><div class="ttdeci">BOOL xMBPortEventGet(eMBEventType *eEvent)</div></div>
+<div class="ttc" id="ambport_8h_html_adf96b9d106626e42fa0b7b1a0b802523"><div class="ttname"><a href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523">vMBPortTimersDisable</a></div><div class="ttdeci">void vMBPortTimersDisable(void)</div></div>
+<div class="ttc" id="ambport_8h_html_ae97991ffb6ce01584afce5dd4f653b41"><div class="ttname"><a href="mbport_8h.html#ae97991ffb6ce01584afce5dd4f653b41">vMBPortClose</a></div><div class="ttdeci">void vMBPortClose(void)</div></div>
+<div class="ttc" id="ambport_8h_html_af614e62c57eaba86f45c45e5d0e6cfd9"><div class="ttname"><a href="mbport_8h.html#af614e62c57eaba86f45c45e5d0e6cfd9">xMBPortSerialInit</a></div><div class="ttdeci">BOOL xMBPortSerialInit(UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity eParity)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

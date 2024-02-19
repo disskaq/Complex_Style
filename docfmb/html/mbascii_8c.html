@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/ascii/mbascii.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_d9d9cd700312b3e89ca385fe7b12076e.html">ascii</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Файл mbascii.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stdlib.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
+<code>#include &quot;port.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="mb_8h_source.html">mb.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbconfig_8h_source.html">mbconfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbascii_8h_source.html">mbascii.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbframe_8h_source.html">mbframe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbcrc_8h_source.html">mbcrc.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbport_8h_source.html">mbport.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для mbascii.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbascii_8c__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2ascii_2mbascii_8c" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2ascii_2mbascii_8c" id="afreemodbus-v1_85_80_2modbus_2ascii_2mbascii_8c">
+<area shape="rect" title=" " alt="" coords="232,5,408,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,69,123"/>
+<area shape="poly" title=" " alt="" coords="248,51,85,97,83,92,246,46"/>
+<area shape="rect" title=" " alt="" coords="93,96,157,123"/>
+<area shape="poly" title=" " alt="" coords="271,51,170,92,168,87,269,46"/>
+<area shape="rect" title=" " alt="" coords="139,171,194,197"/>
+<area shape="poly" title=" " alt="" coords="283,51,252,72,222,98,198,128,181,158,176,155,194,125,218,94,248,68,280,46"/>
+<area shape="rect" href="mb_8h.html" title=" " alt="" coords="232,96,282,123"/>
+<area shape="poly" title=" " alt="" coords="306,50,278,85,274,82,301,47"/>
+<area shape="rect" href="mbport_8h.html" title=" " alt="" coords="321,171,393,197"/>
+<area shape="poly" title=" " alt="" coords="327,48,353,155,348,156,322,49"/>
+<area shape="rect" href="mbconfig_8h.html" title=" " alt="" coords="358,96,442,123"/>
+<area shape="poly" title=" " alt="" coords="342,47,378,83,375,87,338,50"/>
+<area shape="rect" href="mbascii_8h.html" title=" " alt="" coords="466,96,544,123"/>
+<area shape="poly" title=" " alt="" coords="368,46,463,87,461,92,366,51"/>
+<area shape="rect" href="mbframe_8h.html" title=" " alt="" coords="568,96,650,123"/>
+<area shape="poly" title=" " alt="" coords="395,46,554,90,552,95,393,51"/>
+<area shape="rect" href="mbcrc_8h.html" title=" " alt="" coords="675,96,743,123"/>
+<area shape="poly" title=" " alt="" coords="409,42,660,93,659,98,408,47"/>
+<area shape="poly" title=" " alt="" coords="243,125,195,163,192,159,240,121"/>
+<area shape="poly" title=" " alt="" coords="276,121,329,159,326,163,273,125"/>
+<area shape="rect" href="mbproto_8h.html" title=" " alt="" coords="217,171,297,197"/>
+<area shape="poly" title=" " alt="" coords="260,123,260,155,254,155,254,123"/>
+</map>
+</div>
+</div>
+<p><a href="mbascii_8c_source.html">См. исходные тексты.</a></p>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

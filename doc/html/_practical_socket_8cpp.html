@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Practical C++ Sockets: Файл Practical C++ Sockets/PracticalSocket.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Practical C++ Sockets
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_280bd66e79b904053e5cb766f78f9115.html">Practical C++ Sockets</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл PracticalSocket.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_practical_socket_8h_source.html">PracticalSocket.h</a>&quot;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/socket.h&gt;</code><br />
+<code>#include &lt;netdb.h&gt;</code><br />
+<code>#include &lt;arpa/inet.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;netinet/in.h&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для PracticalSocket.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_practical_socket_8cpp__incl.png" border="0" usemap="#a_practical_01_c_09_09_01_sockets_2_practical_socket_8cpp" alt=""/></div>
+<map name="a_practical_01_c_09_09_01_sockets_2_practical_socket_8cpp" id="a_practical_01_c_09_09_01_sockets_2_practical_socket_8cpp">
+<area shape="rect" title=" " alt="" coords="399,5,553,48"/>
+<area shape="rect" href="_practical_socket_8h.html" title=" " alt="" coords="14,96,138,123"/>
+<area shape="poly" title=" " alt="" coords="399,46,154,95,153,90,398,41"/>
+<area shape="rect" title=" " alt="" coords="162,96,251,123"/>
+<area shape="poly" title=" " alt="" coords="407,51,265,94,263,88,406,46"/>
+<area shape="rect" title=" " alt="" coords="276,96,372,123"/>
+<area shape="poly" title=" " alt="" coords="438,51,362,91,360,86,436,46"/>
+<area shape="rect" title=" " alt="" coords="396,96,460,123"/>
+<area shape="poly" title=" " alt="" coords="466,50,446,84,441,81,461,47"/>
+<area shape="rect" title=" " alt="" coords="484,96,567,123"/>
+<area shape="poly" title=" " alt="" coords="491,47,512,81,507,84,486,50"/>
+<area shape="rect" title=" " alt="" coords="590,96,658,123"/>
+<area shape="poly" title=" " alt="" coords="515,46,589,86,587,91,513,51"/>
+<area shape="rect" title=" " alt="" coords="681,96,767,123"/>
+<area shape="poly" title=" " alt="" coords="541,46,671,88,669,93,539,51"/>
+<area shape="rect" title=" " alt="" coords="791,96,852,123"/>
+<area shape="poly" title=" " alt="" coords="553,41,776,93,775,98,552,47"/>
+<area shape="rect" title=" " alt="" coords="5,171,59,197"/>
+<area shape="poly" title=" " alt="" coords="71,125,50,159,45,156,66,122"/>
+<area shape="rect" title=" " alt="" coords="83,171,160,197"/>
+<area shape="poly" title=" " alt="" coords="86,122,108,156,103,159,82,125"/>
+</map>
+</div>
+</div>
+<p><a href="_practical_socket_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:aba7a57aadc5c75eaab8ee698d0fa6608" id="r_aba7a57aadc5c75eaab8ee698d0fa6608"><td class="memItemLeft" align="right" valign="top">typedef void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a></td></tr>
+<tr class="separator:aba7a57aadc5c75eaab8ee698d0fa6608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a155e03535e1d5c1f5df7ceafe63dbdb0" id="r_a155e03535e1d5c1f5df7ceafe63dbdb0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a155e03535e1d5c1f5df7ceafe63dbdb0">fillAddr</a> (const string &amp;address, unsigned short port, sockaddr_in &amp;addr)</td></tr>
+<tr class="separator:a155e03535e1d5c1f5df7ceafe63dbdb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="aba7a57aadc5c75eaab8ee698d0fa6608" name="aba7a57aadc5c75eaab8ee698d0fa6608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba7a57aadc5c75eaab8ee698d0fa6608">&#9670;&#160;</a></span>raw_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void <a class="el" href="#aba7a57aadc5c75eaab8ee698d0fa6608">raw_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00033">33</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a155e03535e1d5c1f5df7ceafe63dbdb0" name="a155e03535e1d5c1f5df7ceafe63dbdb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a155e03535e1d5c1f5df7ceafe63dbdb0">&#9670;&#160;</a></span>fillAddr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void fillAddr </td>
+          <td>(</td>
+          <td class="paramtype">const string &amp;</td>          <td class="paramname"><span class="paramname"><em>address</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>port</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">sockaddr_in &amp;</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="_practical_socket_8cpp_source.html">PracticalSocket.cpp</a> строка <a class="el" href="_practical_socket_8cpp_source.html#l00062">62</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>                                        {</div>
+<div class="line"><span class="lineno">   64</span>  memset(&amp;addr, 0, <span class="keyword">sizeof</span>(addr));  <span class="comment">// Zero out address structure</span></div>
+<div class="line"><span class="lineno">   65</span>  addr.sin_family = AF_INET;       <span class="comment">// Internet address</span></div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>  hostent *host;  <span class="comment">// Resolve name</span></div>
+<div class="line"><span class="lineno">   68</span>  <span class="keywordflow">if</span> ((host = gethostbyname(address.c_str())) == NULL) {</div>
+<div class="line"><span class="lineno">   69</span>    <span class="comment">// strerror() will not work for gethostbyname() and hstrerror() </span></div>
+<div class="line"><span class="lineno">   70</span>    <span class="comment">// is supposedly obsolete</span></div>
+<div class="line"><span class="lineno">   71</span>    <span class="keywordflow">throw</span> <a class="code hl_class" href="class_socket_exception.html">SocketException</a>(<span class="stringliteral">&quot;Failed to resolve name (gethostbyname())&quot;</span>);</div>
+<div class="line"><span class="lineno">   72</span>  }</div>
+<div class="line"><span class="lineno">   73</span>  addr.sin_addr.s_addr = *((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> *) host-&gt;h_addr_list[0]);</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>  addr.sin_port = htons(port);     <span class="comment">// Assign port in network byte order</span></div>
+<div class="line"><span class="lineno">   76</span>}</div>
+<div class="ttc" id="aclass_socket_exception_html"><div class="ttname"><a href="class_socket_exception.html">SocketException</a></div><div class="ttdef"><b>Definition</b> <a href="_practical_socket_8h_source.html#l00031">PracticalSocket.h:31</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_practical_socket_8cpp_a155e03535e1d5c1f5df7ceafe63dbdb0_icgraph.png" border="0" usemap="#a_practical_socket_8cpp_a155e03535e1d5c1f5df7ceafe63dbdb0_icgraph" alt=""/></div>
+<map name="a_practical_socket_8cpp_a155e03535e1d5c1f5df7ceafe63dbdb0_icgraph" id="a_practical_socket_8cpp_a155e03535e1d5c1f5df7ceafe63dbdb0_icgraph">
+<area shape="rect" title=" " alt="" coords="476,72,536,99"/>
+<area shape="rect" href="class_communicating_socket.html#a9192374d9baab8e189860aa8d913683c" title=" " alt="" coords="245,5,397,48"/>
+<area shape="poly" title=" " alt="" coords="461,73,427,63,391,51,393,46,429,57,462,68"/>
+<area shape="rect" href="class_u_d_p_socket.html#a41a3595e226f273953cbd38618af5d5b" title=" " alt="" coords="251,72,391,99"/>
+<area shape="poly" title=" " alt="" coords="460,88,391,88,391,83,460,83"/>
+<area shape="rect" href="class_socket.html#aa6b986410bc2e606ba27d01fa7cb8836" title=" " alt="" coords="214,123,428,149"/>
+<area shape="poly" title=" " alt="" coords="462,103,429,113,385,125,383,120,427,108,460,98"/>
+<area shape="rect" href="class_u_d_p_socket.html#a7482e8e61cef160e1a7c0d6ac15c01be" title=" " alt="" coords="5,13,166,40"/>
+<area shape="poly" title=" " alt="" coords="230,29,166,29,166,24,230,24"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/functions/mbfuncholding.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_ede910a8d261b264c57061ab7f54113a.html">functions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл mbfuncholding.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;stdlib.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
+<code>#include &quot;port.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="mb_8h_source.html">mb.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbframe_8h_source.html">mbframe.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbproto_8h_source.html">mbproto.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbconfig_8h_source.html">mbconfig.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для mbfuncholding.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbfuncholding_8c__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2functions_2mbfuncholding_8c" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2functions_2mbfuncholding_8c" id="afreemodbus-v1_85_80_2modbus_2functions_2mbfuncholding_8c">
+<area shape="rect" title=" " alt="" coords="169,5,345,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,69,123"/>
+<area shape="poly" title=" " alt="" coords="201,51,84,94,82,89,199,46"/>
+<area shape="rect" title=" " alt="" coords="93,96,157,123"/>
+<area shape="poly" title=" " alt="" coords="224,51,160,90,157,85,222,46"/>
+<area shape="rect" title=" " alt="" coords="142,171,196,197"/>
+<area shape="poly" title=" " alt="" coords="248,50,186,158,181,156,243,47"/>
+<area shape="rect" href="mb_8h.html" title=" " alt="" coords="232,96,282,123"/>
+<area shape="poly" title=" " alt="" coords="260,49,260,80,254,80,254,49"/>
+<area shape="rect" href="mbproto_8h.html" title=" " alt="" coords="317,171,397,197"/>
+<area shape="poly" title=" " alt="" coords="272,47,343,156,338,159,268,50"/>
+<area shape="rect" href="mbframe_8h.html" title=" " alt="" coords="357,96,440,123"/>
+<area shape="poly" title=" " alt="" coords="295,46,364,86,362,90,292,51"/>
+<area shape="rect" href="mbconfig_8h.html" title=" " alt="" coords="464,96,549,123"/>
+<area shape="poly" title=" " alt="" coords="322,46,453,88,451,93,320,51"/>
+<area shape="poly" title=" " alt="" coords="243,125,198,163,194,159,240,121"/>
+<area shape="rect" href="mbport_8h.html" title=" " alt="" coords="221,171,293,197"/>
+<area shape="poly" title=" " alt="" coords="260,123,260,155,254,155,254,123"/>
+<area shape="poly" title=" " alt="" coords="276,121,329,159,326,163,273,125"/>
+</map>
+</div>
+</div>
+<p><a href="mbfuncholding_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ab3c4b5bd48b2160671541e4026f2caae" id="r_ab3c4b5bd48b2160671541e4026f2caae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3c4b5bd48b2160671541e4026f2caae">MB_PDU_FUNC_READ_ADDR_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0)</td></tr>
+<tr class="separator:ab3c4b5bd48b2160671541e4026f2caae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f5bb2d34c79141f425774b00ddd63b" id="r_ae5f5bb2d34c79141f425774b00ddd63b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5f5bb2d34c79141f425774b00ddd63b">MB_PDU_FUNC_READ_REGCNT_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td></tr>
+<tr class="separator:ae5f5bb2d34c79141f425774b00ddd63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968555f75801294753a5b2da91bea764" id="r_a968555f75801294753a5b2da91bea764"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a968555f75801294753a5b2da91bea764">MB_PDU_FUNC_READ_SIZE</a>&#160;&#160;&#160;( 4 )</td></tr>
+<tr class="separator:a968555f75801294753a5b2da91bea764"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac66f1588a8138771b7ba2ec39319ae50" id="r_ac66f1588a8138771b7ba2ec39319ae50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac66f1588a8138771b7ba2ec39319ae50">MB_PDU_FUNC_READ_REGCNT_MAX</a>&#160;&#160;&#160;( 0x007D )</td></tr>
+<tr class="separator:ac66f1588a8138771b7ba2ec39319ae50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e062d894a248db85a8270050f94e97e" id="r_a7e062d894a248db85a8270050f94e97e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e062d894a248db85a8270050f94e97e">MB_PDU_FUNC_WRITE_ADDR_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0)</td></tr>
+<tr class="separator:a7e062d894a248db85a8270050f94e97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3366487f1f94813dbf7e118146fe0698" id="r_a3366487f1f94813dbf7e118146fe0698"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3366487f1f94813dbf7e118146fe0698">MB_PDU_FUNC_WRITE_VALUE_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td></tr>
+<tr class="separator:a3366487f1f94813dbf7e118146fe0698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740439a1794d2f5be18109f38be50862" id="r_a740439a1794d2f5be18109f38be50862"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a740439a1794d2f5be18109f38be50862">MB_PDU_FUNC_WRITE_SIZE</a>&#160;&#160;&#160;( 4 )</td></tr>
+<tr class="separator:a740439a1794d2f5be18109f38be50862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac28b968f1b4bbba124a7576e89a4ee96" id="r_ac28b968f1b4bbba124a7576e89a4ee96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac28b968f1b4bbba124a7576e89a4ee96">MB_PDU_FUNC_WRITE_MUL_ADDR_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0 )</td></tr>
+<tr class="separator:ac28b968f1b4bbba124a7576e89a4ee96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca29db54dc0ae16cdd93bb45ef7d4a3" id="r_afca29db54dc0ae16cdd93bb45ef7d4a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afca29db54dc0ae16cdd93bb45ef7d4a3">MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td></tr>
+<tr class="separator:afca29db54dc0ae16cdd93bb45ef7d4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40dd5916e0b4785402f5f583a288035" id="r_ad40dd5916e0b4785402f5f583a288035"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad40dd5916e0b4785402f5f583a288035">MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 4 )</td></tr>
+<tr class="separator:ad40dd5916e0b4785402f5f583a288035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712155f8f2d0babedfa33f63a07e875b" id="r_a712155f8f2d0babedfa33f63a07e875b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a712155f8f2d0babedfa33f63a07e875b">MB_PDU_FUNC_WRITE_MUL_VALUES_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 5 )</td></tr>
+<tr class="separator:a712155f8f2d0babedfa33f63a07e875b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e813e9e8d7743a9ae3f57bed67d0f64" id="r_a2e813e9e8d7743a9ae3f57bed67d0f64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e813e9e8d7743a9ae3f57bed67d0f64">MB_PDU_FUNC_WRITE_MUL_SIZE_MIN</a>&#160;&#160;&#160;( 5 )</td></tr>
+<tr class="separator:a2e813e9e8d7743a9ae3f57bed67d0f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a800fa95c7f048301acb5b8279693871f" id="r_a800fa95c7f048301acb5b8279693871f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a800fa95c7f048301acb5b8279693871f">MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX</a>&#160;&#160;&#160;( 0x0078 )</td></tr>
+<tr class="separator:a800fa95c7f048301acb5b8279693871f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73c8682fb51eaf5761a356af0361b4fb" id="r_a73c8682fb51eaf5761a356af0361b4fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73c8682fb51eaf5761a356af0361b4fb">MB_PDU_FUNC_READWRITE_READ_ADDR_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0 )</td></tr>
+<tr class="separator:a73c8682fb51eaf5761a356af0361b4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa52d7699dabfe567af4e0658772f36a0" id="r_aa52d7699dabfe567af4e0658772f36a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa52d7699dabfe567af4e0658772f36a0">MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td></tr>
+<tr class="separator:aa52d7699dabfe567af4e0658772f36a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a919f8364404198ac2ed92be74bec4655" id="r_a919f8364404198ac2ed92be74bec4655"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a919f8364404198ac2ed92be74bec4655">MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 4 )</td></tr>
+<tr class="separator:a919f8364404198ac2ed92be74bec4655"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1551f9a31d4bb7a9d6942740ebbd0286" id="r_a1551f9a31d4bb7a9d6942740ebbd0286"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1551f9a31d4bb7a9d6942740ebbd0286">MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 6 )</td></tr>
+<tr class="separator:a1551f9a31d4bb7a9d6942740ebbd0286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bb331fcae41846bf075898c9b7a93c6" id="r_a0bb331fcae41846bf075898c9b7a93c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0bb331fcae41846bf075898c9b7a93c6">MB_PDU_FUNC_READWRITE_BYTECNT_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 8 )</td></tr>
+<tr class="separator:a0bb331fcae41846bf075898c9b7a93c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a491ef64901a1d102c45267a07dab2f1f" id="r_a491ef64901a1d102c45267a07dab2f1f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a491ef64901a1d102c45267a07dab2f1f">MB_PDU_FUNC_READWRITE_WRITE_VALUES_OFF</a>&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 9 )</td></tr>
+<tr class="separator:a491ef64901a1d102c45267a07dab2f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18562933be8dd65c5ac854fcb90af8b8" id="r_a18562933be8dd65c5ac854fcb90af8b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18562933be8dd65c5ac854fcb90af8b8">MB_PDU_FUNC_READWRITE_SIZE_MIN</a>&#160;&#160;&#160;( 9 )</td></tr>
+<tr class="separator:a18562933be8dd65c5ac854fcb90af8b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad5d2cc07a83fa7ea723ed734c905bc55" id="r_ad5d2cc07a83fa7ea723ed734c905bc55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9c">eMBException</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5d2cc07a83fa7ea723ed734c905bc55">prveMBError2Exception</a> (<a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eErrorCode)</td></tr>
+<tr class="separator:ad5d2cc07a83fa7ea723ed734c905bc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ab3c4b5bd48b2160671541e4026f2caae" name="ab3c4b5bd48b2160671541e4026f2caae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c4b5bd48b2160671541e4026f2caae">&#9670;&#160;</a></span>MB_PDU_FUNC_READ_ADDR_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READ_ADDR_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00045">45</a></p>
+
+</div>
+</div>
+<a id="ac66f1588a8138771b7ba2ec39319ae50" name="ac66f1588a8138771b7ba2ec39319ae50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac66f1588a8138771b7ba2ec39319ae50">&#9670;&#160;</a></span>MB_PDU_FUNC_READ_REGCNT_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READ_REGCNT_MAX&#160;&#160;&#160;( 0x007D )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00048">48</a></p>
+
+</div>
+</div>
+<a id="ae5f5bb2d34c79141f425774b00ddd63b" name="ae5f5bb2d34c79141f425774b00ddd63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f5bb2d34c79141f425774b00ddd63b">&#9670;&#160;</a></span>MB_PDU_FUNC_READ_REGCNT_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READ_REGCNT_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00046">46</a></p>
+
+</div>
+</div>
+<a id="a968555f75801294753a5b2da91bea764" name="a968555f75801294753a5b2da91bea764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968555f75801294753a5b2da91bea764">&#9670;&#160;</a></span>MB_PDU_FUNC_READ_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READ_SIZE&#160;&#160;&#160;( 4 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00047">47</a></p>
+
+</div>
+</div>
+<a id="a0bb331fcae41846bf075898c9b7a93c6" name="a0bb331fcae41846bf075898c9b7a93c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bb331fcae41846bf075898c9b7a93c6">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_BYTECNT_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_BYTECNT_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 8 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00065">65</a></p>
+
+</div>
+</div>
+<a id="a73c8682fb51eaf5761a356af0361b4fb" name="a73c8682fb51eaf5761a356af0361b4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73c8682fb51eaf5761a356af0361b4fb">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_READ_ADDR_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_READ_ADDR_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00061">61</a></p>
+
+</div>
+</div>
+<a id="aa52d7699dabfe567af4e0658772f36a0" name="aa52d7699dabfe567af4e0658772f36a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa52d7699dabfe567af4e0658772f36a0">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_READ_REGCNT_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00062">62</a></p>
+
+</div>
+</div>
+<a id="a18562933be8dd65c5ac854fcb90af8b8" name="a18562933be8dd65c5ac854fcb90af8b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18562933be8dd65c5ac854fcb90af8b8">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_SIZE_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_SIZE_MIN&#160;&#160;&#160;( 9 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00067">67</a></p>
+
+</div>
+</div>
+<a id="a919f8364404198ac2ed92be74bec4655" name="a919f8364404198ac2ed92be74bec4655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919f8364404198ac2ed92be74bec4655">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_WRITE_ADDR_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 4 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00063">63</a></p>
+
+</div>
+</div>
+<a id="a1551f9a31d4bb7a9d6942740ebbd0286" name="a1551f9a31d4bb7a9d6942740ebbd0286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1551f9a31d4bb7a9d6942740ebbd0286">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_WRITE_REGCNT_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 6 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00064">64</a></p>
+
+</div>
+</div>
+<a id="a491ef64901a1d102c45267a07dab2f1f" name="a491ef64901a1d102c45267a07dab2f1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a491ef64901a1d102c45267a07dab2f1f">&#9670;&#160;</a></span>MB_PDU_FUNC_READWRITE_WRITE_VALUES_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_READWRITE_WRITE_VALUES_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 9 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a id="a7e062d894a248db85a8270050f94e97e" name="a7e062d894a248db85a8270050f94e97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e062d894a248db85a8270050f94e97e">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_ADDR_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_ADDR_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00050">50</a></p>
+
+</div>
+</div>
+<a id="ac28b968f1b4bbba124a7576e89a4ee96" name="ac28b968f1b4bbba124a7576e89a4ee96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac28b968f1b4bbba124a7576e89a4ee96">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_MUL_ADDR_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_MUL_ADDR_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 0 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00054">54</a></p>
+
+</div>
+</div>
+<a id="ad40dd5916e0b4785402f5f583a288035" name="ad40dd5916e0b4785402f5f583a288035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40dd5916e0b4785402f5f583a288035">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_MUL_BYTECNT_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 4 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00056">56</a></p>
+
+</div>
+</div>
+<a id="a800fa95c7f048301acb5b8279693871f" name="a800fa95c7f048301acb5b8279693871f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a800fa95c7f048301acb5b8279693871f">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_MUL_REGCNT_MAX&#160;&#160;&#160;( 0x0078 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00059">59</a></p>
+
+</div>
+</div>
+<a id="afca29db54dc0ae16cdd93bb45ef7d4a3" name="afca29db54dc0ae16cdd93bb45ef7d4a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca29db54dc0ae16cdd93bb45ef7d4a3">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_MUL_REGCNT_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00055">55</a></p>
+
+</div>
+</div>
+<a id="a2e813e9e8d7743a9ae3f57bed67d0f64" name="a2e813e9e8d7743a9ae3f57bed67d0f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e813e9e8d7743a9ae3f57bed67d0f64">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_MUL_SIZE_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_MUL_SIZE_MIN&#160;&#160;&#160;( 5 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00058">58</a></p>
+
+</div>
+</div>
+<a id="a712155f8f2d0babedfa33f63a07e875b" name="a712155f8f2d0babedfa33f63a07e875b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712155f8f2d0babedfa33f63a07e875b">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_MUL_VALUES_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_MUL_VALUES_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 5 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00057">57</a></p>
+
+</div>
+</div>
+<a id="a740439a1794d2f5be18109f38be50862" name="a740439a1794d2f5be18109f38be50862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740439a1794d2f5be18109f38be50862">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_SIZE&#160;&#160;&#160;( 4 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00052">52</a></p>
+
+</div>
+</div>
+<a id="a3366487f1f94813dbf7e118146fe0698" name="a3366487f1f94813dbf7e118146fe0698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3366487f1f94813dbf7e118146fe0698">&#9670;&#160;</a></span>MB_PDU_FUNC_WRITE_VALUE_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_WRITE_VALUE_OFF&#160;&#160;&#160;( <a class="el" href="mbframe_8h.html#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a> + 2 )</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbfuncholding_8c_source.html">mbfuncholding.c</a> строка <a class="el" href="mbfuncholding_8c_source.html#l00051">51</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="ad5d2cc07a83fa7ea723ed734c905bc55" name="ad5d2cc07a83fa7ea723ed734c905bc55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5d2cc07a83fa7ea723ed734c905bc55">&#9670;&#160;</a></span>prveMBError2Exception()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9c">eMBException</a> prveMBError2Exception </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a></td>          <td class="paramname"><span class="paramname"><em>eErrorCode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbutils_8c_source.html">mbutils.c</a> строка <a class="el" href="mbutils_8c_source.html#l00117">117</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>    <a class="code hl_enumeration" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9c">eMBException</a>    eStatus;</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    <span class="keywordflow">switch</span> ( eErrorCode )</div>
+<div class="line"><span class="lineno">  122</span>    {</div>
+<div class="line"><span class="lineno">  123</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a>:</div>
+<div class="line"><span class="lineno">  124</span>            eStatus = <a class="code hl_enumvalue" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9cab784d14e9328dd8bdcacb5a0e6eb7808">MB_EX_NONE</a>;</div>
+<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7">MB_ENOREG</a>:</div>
+<div class="line"><span class="lineno">  128</span>            eStatus = <a class="code hl_enumvalue" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9ca610b4256de04afb3b4ef7b7d3e19ed52">MB_EX_ILLEGAL_DATA_ADDRESS</a>;</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5">MB_ETIMEDOUT</a>:</div>
+<div class="line"><span class="lineno">  132</span>            eStatus = <a class="code hl_enumvalue" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9cae3ec1c97155e5f397d3bad66efa75fdc">MB_EX_SLAVE_BUSY</a>;</div>
+<div class="line"><span class="lineno">  133</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  136</span>            eStatus = <a class="code hl_enumvalue" href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9cad3dbaac0c2e2f7005e3a896f5c7f8274">MB_EX_SLAVE_DEVICE_FAILURE</a>;</div>
+<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  138</span>    }</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    <span class="keywordflow">return</span> eStatus;</div>
+<div class="line"><span class="lineno">  141</span>}</div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5">MB_ETIMEDOUT</a></div><div class="ttdeci">@ MB_ETIMEDOUT</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00122">mb.h:121</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a></div><div class="ttdeci">@ MB_ENOERR</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00114">mb.h:114</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7">MB_ENOREG</a></div><div class="ttdeci">@ MB_ENOREG</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00115">mb.h:115</a></div></div>
+<div class="ttc" id="ambproto_8h_html_ae054c61e74d0e5bd54f7aa2bda497c9c"><div class="ttname"><a href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9c">eMBException</a></div><div class="ttdeci">eMBException</div><div class="ttdef"><b>Definition</b> <a href="mbproto_8h_source.html#l00058">mbproto.h:59</a></div></div>
+<div class="ttc" id="ambproto_8h_html_ae054c61e74d0e5bd54f7aa2bda497c9ca610b4256de04afb3b4ef7b7d3e19ed52"><div class="ttname"><a href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9ca610b4256de04afb3b4ef7b7d3e19ed52">MB_EX_ILLEGAL_DATA_ADDRESS</a></div><div class="ttdeci">@ MB_EX_ILLEGAL_DATA_ADDRESS</div><div class="ttdef"><b>Definition</b> <a href="mbproto_8h_source.html#l00062">mbproto.h:62</a></div></div>
+<div class="ttc" id="ambproto_8h_html_ae054c61e74d0e5bd54f7aa2bda497c9cab784d14e9328dd8bdcacb5a0e6eb7808"><div class="ttname"><a href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9cab784d14e9328dd8bdcacb5a0e6eb7808">MB_EX_NONE</a></div><div class="ttdeci">@ MB_EX_NONE</div><div class="ttdef"><b>Definition</b> <a href="mbproto_8h_source.html#l00060">mbproto.h:60</a></div></div>
+<div class="ttc" id="ambproto_8h_html_ae054c61e74d0e5bd54f7aa2bda497c9cad3dbaac0c2e2f7005e3a896f5c7f8274"><div class="ttname"><a href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9cad3dbaac0c2e2f7005e3a896f5c7f8274">MB_EX_SLAVE_DEVICE_FAILURE</a></div><div class="ttdeci">@ MB_EX_SLAVE_DEVICE_FAILURE</div><div class="ttdef"><b>Definition</b> <a href="mbproto_8h_source.html#l00064">mbproto.h:64</a></div></div>
+<div class="ttc" id="ambproto_8h_html_ae054c61e74d0e5bd54f7aa2bda497c9cae3ec1c97155e5f397d3bad66efa75fdc"><div class="ttname"><a href="mbproto_8h.html#ae054c61e74d0e5bd54f7aa2bda497c9cae3ec1c97155e5f397d3bad66efa75fdc">MB_EX_SLAVE_BUSY</a></div><div class="ttdeci">@ MB_EX_SLAVE_BUSY</div><div class="ttdef"><b>Definition</b> <a href="mbproto_8h_source.html#l00066">mbproto.h:66</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

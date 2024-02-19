@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/include/mbframe.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_0c75cef0ba1e20c657ed8321c6ec6c7a.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a>  </div>
+  <div class="headertitle"><div class="title">Файл mbframe.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbframe_8h__dep__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2include_2mbframe_8hdep" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2include_2mbframe_8hdep" id="afreemodbus-v1_85_80_2modbus_2include_2mbframe_8hdep">
+<area shape="rect" title=" " alt="" coords="805,5,982,48"/>
+<area shape="rect" href="mbascii_8c.html" title=" " alt="" coords="5,96,182,139"/>
+<area shape="poly" title=" " alt="" coords="790,37,520,60,357,77,194,99,183,100,182,95,193,93,356,72,519,55,790,32"/>
+<area shape="rect" href="mbfunccoils_8c.html" title=" " alt="" coords="205,96,382,139"/>
+<area shape="poly" title=" " alt="" coords="790,43,605,67,394,99,383,101,382,95,393,93,604,62,789,38"/>
+<area shape="rect" href="mbfuncdisc_8c.html" title=" " alt="" coords="405,96,582,139"/>
+<area shape="poly" title=" " alt="" coords="791,53,583,99,581,94,789,48"/>
+<area shape="rect" href="mbfuncholding_8c.html" title=" " alt="" coords="605,96,782,139"/>
+<area shape="poly" title=" " alt="" coords="834,57,742,98,739,93,831,52"/>
+<area shape="rect" href="mbfuncinput_8c.html" title=" " alt="" coords="805,96,982,139"/>
+<area shape="poly" title=" " alt="" coords="896,64,896,96,891,96,891,64"/>
+<area shape="rect" href="mbfuncother_8c.html" title=" " alt="" coords="1005,96,1182,139"/>
+<area shape="poly" title=" " alt="" coords="956,52,1048,93,1045,98,953,57"/>
+<area shape="rect" href="mb_8c.html" title=" " alt="" coords="1206,104,1416,131"/>
+<area shape="poly" title=" " alt="" coords="997,47,1252,101,1251,106,996,52"/>
+<area shape="rect" href="mbrtu_8c.html" title=" " alt="" coords="1440,96,1616,139"/>
+<area shape="poly" title=" " alt="" coords="997,36,1197,60,1429,93,1440,95,1439,101,1428,99,1197,65,997,42"/>
+<area shape="rect" href="mbtcp_8c.html" title=" " alt="" coords="1640,96,1816,139"/>
+<area shape="poly" title=" " alt="" coords="997,31,1282,54,1456,71,1629,93,1640,95,1639,100,1628,99,1455,77,1282,59,997,37"/>
+</map>
+</div>
+</div>
+<p><a href="mbframe_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a072469ed5a2489229aad3bb243b4370f" id="r_a072469ed5a2489229aad3bb243b4370f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a072469ed5a2489229aad3bb243b4370f">MB_PDU_SIZE_MAX</a>&#160;&#160;&#160;253</td></tr>
+<tr class="separator:a072469ed5a2489229aad3bb243b4370f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95544bbb1d07b33d7e7d6cc28b5f0956" id="r_a95544bbb1d07b33d7e7d6cc28b5f0956"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95544bbb1d07b33d7e7d6cc28b5f0956">MB_PDU_SIZE_MIN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a95544bbb1d07b33d7e7d6cc28b5f0956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a554b629520c4266fdff39099a2eef5db" id="r_a554b629520c4266fdff39099a2eef5db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a554b629520c4266fdff39099a2eef5db">MB_PDU_FUNC_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a554b629520c4266fdff39099a2eef5db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace44746a2b6323b94de9029ed491b58f" id="r_ace44746a2b6323b94de9029ed491b58f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace44746a2b6323b94de9029ed491b58f">MB_PDU_DATA_OFF</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ace44746a2b6323b94de9029ed491b58f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a075bd0854eba03b7b33da5933e96a078" id="r_a075bd0854eba03b7b33da5933e96a078"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a075bd0854eba03b7b33da5933e96a078">pvMBFrameStart</a>) (void)</td></tr>
+<tr class="separator:a075bd0854eba03b7b33da5933e96a078"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae77f5c0d4c4e2fa7afd55122c599f3e2" id="r_ae77f5c0d4c4e2fa7afd55122c599f3e2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae77f5c0d4c4e2fa7afd55122c599f3e2">pvMBFrameStop</a>) (void)</td></tr>
+<tr class="separator:ae77f5c0d4c4e2fa7afd55122c599f3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06f6bce5e91795fb466ed8edf386c611" id="r_a06f6bce5e91795fb466ed8edf386c611"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06f6bce5e91795fb466ed8edf386c611">peMBFrameReceive</a>) (UCHAR *pucRcvAddress, UCHAR **pucFrame, USHORT *pusLength)</td></tr>
+<tr class="separator:a06f6bce5e91795fb466ed8edf386c611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2819876d9dce4626d9d54833902fa88c" id="r_a2819876d9dce4626d9d54833902fa88c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2819876d9dce4626d9d54833902fa88c">peMBFrameSend</a>) (UCHAR slaveAddress, const UCHAR *pucFrame, USHORT usLength)</td></tr>
+<tr class="separator:a2819876d9dce4626d9d54833902fa88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90725e31188ed4e9b8250fd39625b57" id="r_ac90725e31188ed4e9b8250fd39625b57"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac90725e31188ed4e9b8250fd39625b57">pvMBFrameClose</a>) (void)</td></tr>
+<tr class="separator:ac90725e31188ed4e9b8250fd39625b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="ace44746a2b6323b94de9029ed491b58f" name="ace44746a2b6323b94de9029ed491b58f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace44746a2b6323b94de9029ed491b58f">&#9670;&#160;</a></span>MB_PDU_DATA_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_DATA_OFF&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Offset for response data in PDU. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00067">67</a></p>
+
+</div>
+</div>
+<a id="a554b629520c4266fdff39099a2eef5db" name="a554b629520c4266fdff39099a2eef5db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a554b629520c4266fdff39099a2eef5db">&#9670;&#160;</a></span>MB_PDU_FUNC_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_FUNC_OFF&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Offset of function code in PDU. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00066">66</a></p>
+
+</div>
+</div>
+<a id="a072469ed5a2489229aad3bb243b4370f" name="a072469ed5a2489229aad3bb243b4370f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a072469ed5a2489229aad3bb243b4370f">&#9670;&#160;</a></span>MB_PDU_SIZE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_SIZE_MAX&#160;&#160;&#160;253</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constants which defines the format of a modbus frame. The example is shown for a Modbus RTU/ASCII frame. Note that the Modbus PDU is not dependent on the underlying transport.</p>
+<p><code> &lt;---------------------&mdash; MODBUS SERIAL LINE PDU (1) -------------------&gt; &lt;--------&mdash; MODBUS PDU (1') ----------------&gt; +--------&mdash;+------------&mdash;+-------------------------&mdash;+----------&mdash;+ | Address | Function Code | Data | CRC/LRC | +--------&mdash;+------------&mdash;+-------------------------&mdash;+----------&mdash;+ | | | | (2) (3/2') (3') (4)</code></p>
+<p><code>(1) ... MB_SER_PDU_SIZE_MAX = 256 (2) ... MB_SER_PDU_ADDR_OFF = 0 (3) ... MB_SER_PDU_PDU_OFF = 1 (4) ... MB_SER_PDU_SIZE_CRC = 2</code></p>
+<p><code>(1') ... MB_PDU_SIZE_MAX = 253 (2') ... MB_PDU_FUNC_OFF = 0 (3') ... MB_PDU_DATA_OFF = 1 </code> Maximum size of a PDU. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00064">64</a></p>
+
+</div>
+</div>
+<a id="a95544bbb1d07b33d7e7d6cc28b5f0956" name="a95544bbb1d07b33d7e7d6cc28b5f0956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95544bbb1d07b33d7e7d6cc28b5f0956">&#9670;&#160;</a></span>MB_PDU_SIZE_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_PDU_SIZE_MIN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function Code </p>
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00065">65</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="a06f6bce5e91795fb466ed8edf386c611" name="a06f6bce5e91795fb466ed8edf386c611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06f6bce5e91795fb466ed8edf386c611">&#9670;&#160;</a></span>peMBFrameReceive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>(* peMBFrameReceive) (UCHAR *pucRcvAddress, UCHAR **pucFrame, USHORT *pusLength)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00074">74</a></p>
+
+</div>
+</div>
+<a id="a2819876d9dce4626d9d54833902fa88c" name="a2819876d9dce4626d9d54833902fa88c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2819876d9dce4626d9d54833902fa88c">&#9670;&#160;</a></span>peMBFrameSend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>(* peMBFrameSend) (UCHAR slaveAddress, const UCHAR *pucFrame, USHORT usLength)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00078">78</a></p>
+
+</div>
+</div>
+<a id="ac90725e31188ed4e9b8250fd39625b57" name="ac90725e31188ed4e9b8250fd39625b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac90725e31188ed4e9b8250fd39625b57">&#9670;&#160;</a></span>pvMBFrameClose</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* pvMBFrameClose) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00082">82</a></p>
+
+</div>
+</div>
+<a id="a075bd0854eba03b7b33da5933e96a078" name="a075bd0854eba03b7b33da5933e96a078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a075bd0854eba03b7b33da5933e96a078">&#9670;&#160;</a></span>pvMBFrameStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* pvMBFrameStart) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00070">70</a></p>
+
+</div>
+</div>
+<a id="ae77f5c0d4c4e2fa7afd55122c599f3e2" name="ae77f5c0d4c4e2fa7afd55122c599f3e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae77f5c0d4c4e2fa7afd55122c599f3e2">&#9670;&#160;</a></span>pvMBFrameStop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* pvMBFrameStop) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbframe_8h_source.html">mbframe.h</a> строка <a class="el" href="mbframe_8h_source.html#l00072">72</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

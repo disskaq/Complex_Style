@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/tcp/mbtcp.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_ad8e370050b499ed45b2bdc926ecf033.html">tcp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл mbtcp.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbtcp_8h__dep__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2tcp_2mbtcp_8hdep" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2tcp_2mbtcp_8hdep" id="afreemodbus-v1_85_80_2modbus_2tcp_2mbtcp_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,182,48"/>
+<area shape="rect" href="mbtcp_8c.html" title=" " alt="" coords="5,96,182,139"/>
+<area shape="poly" title=" " alt="" coords="96,64,96,96,91,96,91,64"/>
+</map>
+</div>
+</div>
+<p><a href="mbtcp_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a86f074736a0c94868fb139cd9de1e1e4" id="r_a86f074736a0c94868fb139cd9de1e1e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86f074736a0c94868fb139cd9de1e1e4">MB_TCP_PSEUDO_ADDRESS</a>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:a86f074736a0c94868fb139cd9de1e1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:afc4d97e1ef477aa7d6462bd11cda6350" id="r_afc4d97e1ef477aa7d6462bd11cda6350"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc4d97e1ef477aa7d6462bd11cda6350">eMBTCPDoInit</a> (USHORT ucTCPPort)</td></tr>
+<tr class="separator:afc4d97e1ef477aa7d6462bd11cda6350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c3d680e5dcb5a83148eab88618adacf" id="r_a4c3d680e5dcb5a83148eab88618adacf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c3d680e5dcb5a83148eab88618adacf">eMBTCPStart</a> (void)</td></tr>
+<tr class="separator:a4c3d680e5dcb5a83148eab88618adacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69f057684ffba6bb272096f78748f3c0" id="r_a69f057684ffba6bb272096f78748f3c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69f057684ffba6bb272096f78748f3c0">eMBTCPStop</a> (void)</td></tr>
+<tr class="separator:a69f057684ffba6bb272096f78748f3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9af49438982de4ee6447f0c53aa7cf15" id="r_a9af49438982de4ee6447f0c53aa7cf15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9af49438982de4ee6447f0c53aa7cf15">eMBTCPReceive</a> (UCHAR *pucRcvAddress, UCHAR **pucFrame, USHORT *pusLength)</td></tr>
+<tr class="separator:a9af49438982de4ee6447f0c53aa7cf15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a739ca896039491dbbe5ea1f1701fb" id="r_ae3a739ca896039491dbbe5ea1f1701fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a739ca896039491dbbe5ea1f1701fb">eMBTCPSend</a> (UCHAR _unused, const UCHAR *pucFrame, USHORT usLength)</td></tr>
+<tr class="separator:ae3a739ca896039491dbbe5ea1f1701fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a86f074736a0c94868fb139cd9de1e1e4" name="a86f074736a0c94868fb139cd9de1e1e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86f074736a0c94868fb139cd9de1e1e4">&#9670;&#160;</a></span>MB_TCP_PSEUDO_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MB_TCP_PSEUDO_ADDRESS&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbtcp_8h_source.html">mbtcp.h</a> строка <a class="el" href="mbtcp_8h_source.html#l00039">39</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="afc4d97e1ef477aa7d6462bd11cda6350" name="afc4d97e1ef477aa7d6462bd11cda6350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc4d97e1ef477aa7d6462bd11cda6350">&#9670;&#160;</a></span>eMBTCPDoInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eMBTCPDoInit </td>
+          <td>(</td>
+          <td class="paramtype">USHORT</td>          <td class="paramname"><span class="paramname"><em>ucTCPPort</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9af49438982de4ee6447f0c53aa7cf15" name="a9af49438982de4ee6447f0c53aa7cf15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9af49438982de4ee6447f0c53aa7cf15">&#9670;&#160;</a></span>eMBTCPReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eMBTCPReceive </td>
+          <td>(</td>
+          <td class="paramtype">UCHAR *</td>          <td class="paramname"><span class="paramname"><em>pucRcvAddress</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UCHAR **</td>          <td class="paramname"><span class="paramname"><em>pucFrame</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">USHORT *</td>          <td class="paramname"><span class="paramname"><em>pusLength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3a739ca896039491dbbe5ea1f1701fb" name="ae3a739ca896039491dbbe5ea1f1701fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a739ca896039491dbbe5ea1f1701fb">&#9670;&#160;</a></span>eMBTCPSend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eMBTCPSend </td>
+          <td>(</td>
+          <td class="paramtype">UCHAR</td>          <td class="paramname"><span class="paramname"><em>_unused</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UCHAR *</td>          <td class="paramname"><span class="paramname"><em>pucFrame</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">USHORT</td>          <td class="paramname"><span class="paramname"><em>usLength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c3d680e5dcb5a83148eab88618adacf" name="a4c3d680e5dcb5a83148eab88618adacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c3d680e5dcb5a83148eab88618adacf">&#9670;&#160;</a></span>eMBTCPStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eMBTCPStart </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69f057684ffba6bb272096f78748f3c0" name="a69f057684ffba6bb272096f78748f3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69f057684ffba6bb272096f78748f3c0">&#9670;&#160;</a></span>eMBTCPStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eMBTCPStop </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

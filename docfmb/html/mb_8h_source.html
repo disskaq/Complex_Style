@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Исходный файл freemodbus-v1.5.0/modbus/include/mb.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_0c75cef0ba1e20c657ed8321c6ec6c7a.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">mb.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mb_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (c) 2006 Christian Walter &lt;wolti@sil.at&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * are met:</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * 1. Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    notice, this list of conditions and the following disclaimer in the</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    documentation and/or other materials provided with the distribution.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * 3. The name of the author may not be used to endorse or promote products</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    derived from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> * File: $Id: mb.h,v 1.17 2006/12/07 22:10:34 wolti Exp $</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifndef _MB_H</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define _MB_H</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;port.h&quot;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>PR_BEGIN_EXTERN_C</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="mbport_8h.html">mbport.h</a>&quot;</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#include &quot;<a class="code" href="mbproto_8h.html">mbproto.h</a>&quot;</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/* ----------------------- Defines ------------------------------------------*/</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__modbus.html#ga0e6d79d4ff38dbf7d3fd81a80d655b70">   74</a></span><span class="preprocessor">#define MB_TCP_PORT_USE_DEFAULT 0   </span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">/* ----------------------- Type definitions ---------------------------------*/</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="};">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">   85</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a1b807b8cf3d593d8cd8d1a1d21a3da31">   87</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a1b807b8cf3d593d8cd8d1a1d21a3da31">MB_RTU</a>,                     </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61afa37751530d5e48cb5a3f8841f9e3143">   88</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61afa37751530d5e48cb5a3f8841f9e3143">MB_ASCII</a>,                   </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_enumvalue" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a5786284fe284b4a23889bf5b444d5142">MB_TCP</a>                      </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a5786284fe284b4a23889bf5b444d5142">   90</a></span>} <a class="code hl_enumeration" href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">eMBMode</a>;</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">  103</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>{</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8aa210c1d03e2745efb42486b822740d4b">  105</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8aa210c1d03e2745efb42486b822740d4b">MB_REG_READ</a>,                </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_enumvalue" href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8a3d0a62208562b69c5e7692a5a168c14e">MB_REG_WRITE</a>                </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8a3d0a62208562b69c5e7692a5a168c14e">  107</a></span>} <a class="code hl_enumeration" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a>;</div>
+</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="};">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">  112</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">  114</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a>,                  </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7">  115</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7">MB_ENOREG</a>,                  </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dafa57cdb3f85e8ab4baf160579104d624">  116</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dafa57cdb3f85e8ab4baf160579104d624">MB_EINVAL</a>,                  </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">  117</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">MB_EPORTERR</a>,                </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0700c1e37bfc75068e6577bc0b04bb8">  118</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0700c1e37bfc75068e6577bc0b04bb8">MB_ENORES</a>,                  </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">  119</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">MB_EIO</a>,                     </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0e64a209ac1a01935167c6986338a6f">  120</a></span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0e64a209ac1a01935167c6986338a6f">MB_EILLSTATE</a>,               </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5">MB_ETIMEDOUT</a>                </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5">  122</a></span>} <a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>;</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">/* ----------------------- Function prototypes ------------------------------*/</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26">eMBInit</a>( <a class="code hl_enumeration" href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">eMBMode</a> eMode, UCHAR ucSlaveAddress,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                         UCHAR ucPort, ULONG ulBaudRate, <a class="code hl_enumeration" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a> eParity );</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="group__modbus.html#gab06a2d0ef8bdfd866cd934f0ec7e7a6e">  168</a></span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#gab06a2d0ef8bdfd866cd934f0ec7e7a6e">eMBTCPInit</a>( USHORT usTCPPort );</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#gac20080d92be2934456e2a5d27cd36310">eMBClose</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#gab697be370833d562e6b016626d996132">eMBEnable</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#gabcc2a31ec41fc276ab3c3ac705defdf3">eMBDisable</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#ga12648c98d45f768ba878fbcee46caca5">eMBPoll</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="group__modbus.html#gabe2b0e2dccf23d506666aa3cfdf6a8a3">  241</a></span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#gabe2b0e2dccf23d506666aa3cfdf6a8a3">eMBSetSlaveID</a>( UCHAR ucSlaveID, BOOL xIsRunning,</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                               UCHAR <span class="keyword">const</span> *pucAdditional,</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                               USHORT usAdditionalLen );</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus.html#ga5f6e66893b2388a602ac453253a00784">eMBRegisterCB</a>( UCHAR ucFunctionCode, </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                               <a class="code hl_typedef" href="mbproto_8h.html#a9fe16efc84b141d9b9ec804c0ddfa4b1">pxMBFunctionHandler</a> pxHandler );</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="comment">/* ----------------------- Callback -----------------------------------------*/</span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="group__modbus__registers.html#ga7816677520b1eb2ebecf15060a41bc81">  312</a></span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus__registers.html#ga7816677520b1eb2ebecf15060a41bc81">eMBRegInputCB</a>( UCHAR * pucRegBuffer, USHORT usAddress,</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>                               USHORT usNRegs );</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno"><a class="line" href="group__modbus__registers.html#ga10d37e1d80224bf3b1eeb9e246d7582e">  347</a></span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus__registers.html#ga10d37e1d80224bf3b1eeb9e246d7582e">eMBRegHoldingCB</a>( UCHAR * pucRegBuffer, USHORT usAddress,</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                                 USHORT usNRegs, <a class="code hl_enumeration" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a> eMode );</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno"><a class="line" href="group__modbus__registers.html#ga88d9b719291515c60eee1bf9ffa1dd02">  382</a></span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus__registers.html#ga88d9b719291515c60eee1bf9ffa1dd02">eMBRegCoilsCB</a>( UCHAR * pucRegBuffer, USHORT usAddress,</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                               USHORT usNCoils, <a class="code hl_enumeration" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a> eMode );</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno"><a class="line" href="group__modbus__registers.html#ga38101f5da54af137e210a3b8b9fa3887">  411</a></span><a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    <a class="code hl_function" href="group__modbus__registers.html#ga38101f5da54af137e210a3b8b9fa3887">eMBRegDiscreteCB</a>( UCHAR * pucRegBuffer, USHORT usAddress,</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>                                  USHORT usNDiscrete );</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>PR_END_EXTERN_C</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__modbus__registers_html_ga10d37e1d80224bf3b1eeb9e246d7582e"><div class="ttname"><a href="group__modbus__registers.html#ga10d37e1d80224bf3b1eeb9e246d7582e">eMBRegHoldingCB</a></div><div class="ttdeci">eMBErrorCode eMBRegHoldingCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNRegs, eMBRegisterMode eMode)</div><div class="ttdoc">Callback function used if a Holding Register value is read or written by the protocol stack....</div></div>
+<div class="ttc" id="agroup__modbus__registers_html_ga38101f5da54af137e210a3b8b9fa3887"><div class="ttname"><a href="group__modbus__registers.html#ga38101f5da54af137e210a3b8b9fa3887">eMBRegDiscreteCB</a></div><div class="ttdeci">eMBErrorCode eMBRegDiscreteCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNDiscrete)</div><div class="ttdoc">Callback function used if a Input Discrete Register value is read by the protocol stack.</div></div>
+<div class="ttc" id="agroup__modbus__registers_html_ga7816677520b1eb2ebecf15060a41bc81"><div class="ttname"><a href="group__modbus__registers.html#ga7816677520b1eb2ebecf15060a41bc81">eMBRegInputCB</a></div><div class="ttdeci">eMBErrorCode eMBRegInputCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNRegs)</div><div class="ttdoc">Callback function used if the value of a Input Register is required by the protocol stack....</div></div>
+<div class="ttc" id="agroup__modbus__registers_html_ga88d9b719291515c60eee1bf9ffa1dd02"><div class="ttname"><a href="group__modbus__registers.html#ga88d9b719291515c60eee1bf9ffa1dd02">eMBRegCoilsCB</a></div><div class="ttdeci">eMBErrorCode eMBRegCoilsCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNCoils, eMBRegisterMode eMode)</div><div class="ttdoc">Callback function used if a Coil Register value is read or written by the protocol stack....</div></div>
+<div class="ttc" id="agroup__modbus_html_ga12648c98d45f768ba878fbcee46caca5"><div class="ttname"><a href="group__modbus.html#ga12648c98d45f768ba878fbcee46caca5">eMBPoll</a></div><div class="ttdeci">eMBErrorCode eMBPoll(void)</div><div class="ttdoc">The main pooling loop of the Modbus protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00332">mb.c:332</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ga16ba85fa56bcd52a11a12576af445ccb"><div class="ttname"><a href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a></div><div class="ttdeci">eMBParity</div><div class="ttdoc">Parity used for characters in serial mode.</div><div class="ttdef"><b>Definition</b> <a href="mbport_8h_source.html#l00055">mbport.h:56</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ga462d0d9396f02be6f9fd5b6f19463e61"><div class="ttname"><a href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">eMBMode</a></div><div class="ttdeci">eMBMode</div><div class="ttdoc">Modbus serial transmission modes (RTU/ASCII).</div><div class="ttdef"><b>Definition</b> <a href="#l00085">mb.h:86</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ga5f6e66893b2388a602ac453253a00784"><div class="ttname"><a href="group__modbus.html#ga5f6e66893b2388a602ac453253a00784">eMBRegisterCB</a></div><div class="ttdeci">eMBErrorCode eMBRegisterCB(UCHAR ucFunctionCode, pxMBFunctionHandler pxHandler)</div><div class="ttdoc">Registers a callback handler for a given function code.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00226">mb.c:226</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ga622dbe6b38ff1d255523d4736fa3da26"><div class="ttname"><a href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26">eMBInit</a></div><div class="ttdeci">eMBErrorCode eMBInit(eMBMode eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, eMBParity eParity)</div><div class="ttdoc">Initialize the Modbus protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00130">mb.c:130</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ga9e7fce8c431cb0e521c67f7f36dd823d"><div class="ttname"><a href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a></div><div class="ttdeci">eMBErrorCode</div><div class="ttdoc">Errorcodes used by all function in the protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="#l00112">mb.h:113</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gab06a2d0ef8bdfd866cd934f0ec7e7a6e"><div class="ttname"><a href="group__modbus.html#gab06a2d0ef8bdfd866cd934f0ec7e7a6e">eMBTCPInit</a></div><div class="ttdeci">eMBErrorCode eMBTCPInit(USHORT usTCPPort)</div><div class="ttdoc">Initialize the Modbus protocol stack for Modbus TCP.</div></div>
+<div class="ttc" id="agroup__modbus_html_gab697be370833d562e6b016626d996132"><div class="ttname"><a href="group__modbus.html#gab697be370833d562e6b016626d996132">eMBEnable</a></div><div class="ttdeci">eMBErrorCode eMBEnable(void)</div><div class="ttdoc">Enable the Modbus protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00292">mb.c:292</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gabcc2a31ec41fc276ab3c3ac705defdf3"><div class="ttname"><a href="group__modbus.html#gabcc2a31ec41fc276ab3c3ac705defdf3">eMBDisable</a></div><div class="ttdeci">eMBErrorCode eMBDisable(void)</div><div class="ttdoc">Disable the Modbus protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00310">mb.c:310</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gabe2b0e2dccf23d506666aa3cfdf6a8a3"><div class="ttname"><a href="group__modbus.html#gabe2b0e2dccf23d506666aa3cfdf6a8a3">eMBSetSlaveID</a></div><div class="ttdeci">eMBErrorCode eMBSetSlaveID(UCHAR ucSlaveID, BOOL xIsRunning, UCHAR const *pucAdditional, USHORT usAdditionalLen)</div><div class="ttdoc">Configure the slave id of the device.</div></div>
+<div class="ttc" id="agroup__modbus_html_gac20080d92be2934456e2a5d27cd36310"><div class="ttname"><a href="group__modbus.html#gac20080d92be2934456e2a5d27cd36310">eMBClose</a></div><div class="ttdeci">eMBErrorCode eMBClose(void)</div><div class="ttdoc">Release resources used by the protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="mb_8c_source.html#l00273">mb.c:273</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gaf1398cbbeb317b1dbd0276b275f5b0f8"><div class="ttname"><a href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a></div><div class="ttdeci">eMBRegisterMode</div><div class="ttdoc">If register should be written or read.</div><div class="ttdef"><b>Definition</b> <a href="#l00103">mb.h:104</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga462d0d9396f02be6f9fd5b6f19463e61a1b807b8cf3d593d8cd8d1a1d21a3da31"><div class="ttname"><a href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a1b807b8cf3d593d8cd8d1a1d21a3da31">MB_RTU</a></div><div class="ttdeci">@ MB_RTU</div><div class="ttdef"><b>Definition</b> <a href="#l00087">mb.h:87</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga462d0d9396f02be6f9fd5b6f19463e61a5786284fe284b4a23889bf5b444d5142"><div class="ttname"><a href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a5786284fe284b4a23889bf5b444d5142">MB_TCP</a></div><div class="ttdeci">@ MB_TCP</div><div class="ttdef"><b>Definition</b> <a href="#l00090">mb.h:89</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga462d0d9396f02be6f9fd5b6f19463e61afa37751530d5e48cb5a3f8841f9e3143"><div class="ttname"><a href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61afa37751530d5e48cb5a3f8841f9e3143">MB_ASCII</a></div><div class="ttdeci">@ MB_ASCII</div><div class="ttdef"><b>Definition</b> <a href="#l00088">mb.h:88</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5">MB_ETIMEDOUT</a></div><div class="ttdeci">@ MB_ETIMEDOUT</div><div class="ttdef"><b>Definition</b> <a href="#l00122">mb.h:121</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">MB_EPORTERR</a></div><div class="ttdeci">@ MB_EPORTERR</div><div class="ttdef"><b>Definition</b> <a href="#l00117">mb.h:117</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a></div><div class="ttdeci">@ MB_ENOERR</div><div class="ttdef"><b>Definition</b> <a href="#l00114">mb.h:114</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823daf0700c1e37bfc75068e6577bc0b04bb8"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0700c1e37bfc75068e6577bc0b04bb8">MB_ENORES</a></div><div class="ttdeci">@ MB_ENORES</div><div class="ttdef"><b>Definition</b> <a href="#l00118">mb.h:118</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823daf0e64a209ac1a01935167c6986338a6f"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0e64a209ac1a01935167c6986338a6f">MB_EILLSTATE</a></div><div class="ttdeci">@ MB_EILLSTATE</div><div class="ttdef"><b>Definition</b> <a href="#l00120">mb.h:120</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7">MB_ENOREG</a></div><div class="ttdeci">@ MB_ENOREG</div><div class="ttdef"><b>Definition</b> <a href="#l00115">mb.h:115</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">MB_EIO</a></div><div class="ttdeci">@ MB_EIO</div><div class="ttdef"><b>Definition</b> <a href="#l00119">mb.h:119</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823dafa57cdb3f85e8ab4baf160579104d624"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dafa57cdb3f85e8ab4baf160579104d624">MB_EINVAL</a></div><div class="ttdeci">@ MB_EINVAL</div><div class="ttdef"><b>Definition</b> <a href="#l00116">mb.h:116</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ggaf1398cbbeb317b1dbd0276b275f5b0f8a3d0a62208562b69c5e7692a5a168c14e"><div class="ttname"><a href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8a3d0a62208562b69c5e7692a5a168c14e">MB_REG_WRITE</a></div><div class="ttdeci">@ MB_REG_WRITE</div><div class="ttdef"><b>Definition</b> <a href="#l00107">mb.h:106</a></div></div>
+<div class="ttc" id="agroup__modbus_html_ggaf1398cbbeb317b1dbd0276b275f5b0f8aa210c1d03e2745efb42486b822740d4b"><div class="ttname"><a href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8aa210c1d03e2745efb42486b822740d4b">MB_REG_READ</a></div><div class="ttdeci">@ MB_REG_READ</div><div class="ttdef"><b>Definition</b> <a href="#l00105">mb.h:105</a></div></div>
+<div class="ttc" id="ambport_8h_html"><div class="ttname"><a href="mbport_8h.html">mbport.h</a></div></div>
+<div class="ttc" id="ambproto_8h_html"><div class="ttname"><a href="mbproto_8h.html">mbproto.h</a></div></div>
+<div class="ttc" id="ambproto_8h_html_a9fe16efc84b141d9b9ec804c0ddfa4b1"><div class="ttname"><a href="mbproto_8h.html#a9fe16efc84b141d9b9ec804c0ddfa4b1">pxMBFunctionHandler</a></div><div class="ttdeci">eMBException(* pxMBFunctionHandler)(UCHAR *pucFrame, USHORT *pusLength)</div><div class="ttdef"><b>Definition</b> <a href="mbproto_8h_source.html#l00072">mbproto.h:72</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

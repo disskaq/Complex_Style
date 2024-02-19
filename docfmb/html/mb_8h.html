@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/include/mb.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_0c75cef0ba1e20c657ed8321c6ec6c7a.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#enum-members">Перечисления</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл mb.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;port.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbport_8h_source.html">mbport.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mbproto_8h_source.html">mbproto.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для mb.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="mb_8h__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2include_2mb_8h" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2include_2mb_8h" id="afreemodbus-v1_85_80_2modbus_2include_2mb_8h">
+<area shape="rect" title=" " alt="" coords="32,5,209,48"/>
+<area shape="rect" title=" " alt="" coords="5,96,60,123"/>
+<area shape="poly" title=" " alt="" coords="100,51,59,87,56,83,96,47"/>
+<area shape="rect" href="mbport_8h.html" title=" " alt="" coords="84,96,157,123"/>
+<area shape="poly" title=" " alt="" coords="123,49,123,80,118,80,118,49"/>
+<area shape="rect" href="mbproto_8h.html" title=" " alt="" coords="181,96,260,123"/>
+<area shape="poly" title=" " alt="" coords="148,47,195,84,191,88,145,51"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="mb_8h__dep__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2include_2mb_8hdep" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2include_2mb_8hdep" id="afreemodbus-v1_85_80_2modbus_2include_2mb_8hdep">
+<area shape="rect" title=" " alt="" coords="905,5,1082,48"/>
+<area shape="rect" href="mbascii_8c.html" title=" " alt="" coords="5,96,182,139"/>
+<area shape="poly" title=" " alt="" coords="890,36,578,57,386,75,194,99,183,100,182,95,193,93,385,70,577,52,890,30"/>
+<area shape="rect" href="mbfunccoils_8c.html" title=" " alt="" coords="205,96,382,139"/>
+<area shape="poly" title=" " alt="" coords="890,40,662,63,394,99,383,100,382,95,393,93,661,58,889,34"/>
+<area shape="rect" href="mbfuncdisc_8c.html" title=" " alt="" coords="405,96,582,139"/>
+<area shape="poly" title=" " alt="" coords="891,47,594,99,582,101,581,96,593,93,890,42"/>
+<area shape="rect" href="mbfuncholding_8c.html" title=" " alt="" coords="605,96,782,139"/>
+<area shape="poly" title=" " alt="" coords="909,55,765,98,763,93,908,50"/>
+<area shape="rect" href="mbfuncinput_8c.html" title=" " alt="" coords="805,96,982,139"/>
+<area shape="poly" title=" " alt="" coords="961,60,919,97,915,93,957,56"/>
+<area shape="rect" href="mbfuncother_8c.html" title=" " alt="" coords="1005,96,1182,139"/>
+<area shape="poly" title=" " alt="" coords="1030,56,1072,93,1068,97,1026,60"/>
+<area shape="rect" href="mbutils_8c.html" title=" " alt="" coords="1205,96,1382,139"/>
+<area shape="poly" title=" " alt="" coords="1079,50,1224,93,1222,98,1078,55"/>
+<area shape="rect" href="mb_8c.html" title=" " alt="" coords="1406,104,1616,131"/>
+<area shape="poly" title=" " alt="" coords="1097,43,1394,93,1437,101,1437,106,1393,99,1096,48"/>
+<area shape="rect" href="mbrtu_8c.html" title=" " alt="" coords="1640,96,1816,139"/>
+<area shape="poly" title=" " alt="" coords="1098,34,1341,57,1629,93,1640,95,1639,100,1628,99,1340,62,1097,39"/>
+<area shape="rect" href="mbtcp_8c.html" title=" " alt="" coords="1840,96,2016,139"/>
+<area shape="poly" title=" " alt="" coords="1098,30,1424,51,1626,69,1829,93,1840,95,1839,100,1828,99,1626,74,1424,56,1097,35"/>
+</map>
+</div>
+</div>
+<p><a href="mb_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:ga0e6d79d4ff38dbf7d3fd81a80d655b70" id="r_ga0e6d79d4ff38dbf7d3fd81a80d655b70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#ga0e6d79d4ff38dbf7d3fd81a80d655b70">MB_TCP_PORT_USE_DEFAULT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga0e6d79d4ff38dbf7d3fd81a80d655b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the default Modbus TCP port (502)  <br /></td></tr>
+<tr class="separator:ga0e6d79d4ff38dbf7d3fd81a80d655b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Перечисления</h2></td></tr>
+<tr class="memitem:ga462d0d9396f02be6f9fd5b6f19463e61" id="r_ga462d0d9396f02be6f9fd5b6f19463e61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">eMBMode</a> { <a class="el" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a1b807b8cf3d593d8cd8d1a1d21a3da31">MB_RTU</a>
+, <a class="el" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61afa37751530d5e48cb5a3f8841f9e3143">MB_ASCII</a>
+, <a class="el" href="group__modbus.html#gga462d0d9396f02be6f9fd5b6f19463e61a5786284fe284b4a23889bf5b444d5142">MB_TCP</a>
+ }</td></tr>
+<tr class="memdesc:ga462d0d9396f02be6f9fd5b6f19463e61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modbus serial transmission modes (RTU/ASCII).  <a href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga462d0d9396f02be6f9fd5b6f19463e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1398cbbeb317b1dbd0276b275f5b0f8" id="r_gaf1398cbbeb317b1dbd0276b275f5b0f8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a> { <a class="el" href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8aa210c1d03e2745efb42486b822740d4b">MB_REG_READ</a>
+, <a class="el" href="group__modbus.html#ggaf1398cbbeb317b1dbd0276b275f5b0f8a3d0a62208562b69c5e7692a5a168c14e">MB_REG_WRITE</a>
+ }</td></tr>
+<tr class="memdesc:gaf1398cbbeb317b1dbd0276b275f5b0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">If register should be written or read.  <a href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaf1398cbbeb317b1dbd0276b275f5b0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e7fce8c431cb0e521c67f7f36dd823d" id="r_ga9e7fce8c431cb0e521c67f7f36dd823d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> { <br />
+&#160;&#160;<a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a>
+, <a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf415371aad180c545b726d39adbf9ba7">MB_ENOREG</a>
+, <a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dafa57cdb3f85e8ab4baf160579104d624">MB_EINVAL</a>
+, <a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">MB_EPORTERR</a>
+, <br />
+&#160;&#160;<a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0700c1e37bfc75068e6577bc0b04bb8">MB_ENORES</a>
+, <a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">MB_EIO</a>
+, <a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf0e64a209ac1a01935167c6986338a6f">MB_EILLSTATE</a>
+, <a class="el" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da017c559e956f718cf77aafe269f49bd5">MB_ETIMEDOUT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga9e7fce8c431cb0e521c67f7f36dd823d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Errorcodes used by all function in the protocol stack.  <a href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga9e7fce8c431cb0e521c67f7f36dd823d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ga622dbe6b38ff1d255523d4736fa3da26" id="r_ga622dbe6b38ff1d255523d4736fa3da26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26">eMBInit</a> (<a class="el" href="group__modbus.html#ga462d0d9396f02be6f9fd5b6f19463e61">eMBMode</a> eMode, UCHAR ucSlaveAddress, UCHAR ucPort, ULONG ulBaudRate, <a class="el" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a> eParity)</td></tr>
+<tr class="memdesc:ga622dbe6b38ff1d255523d4736fa3da26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Modbus protocol stack.  <br /></td></tr>
+<tr class="separator:ga622dbe6b38ff1d255523d4736fa3da26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab06a2d0ef8bdfd866cd934f0ec7e7a6e" id="r_gab06a2d0ef8bdfd866cd934f0ec7e7a6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#gab06a2d0ef8bdfd866cd934f0ec7e7a6e">eMBTCPInit</a> (USHORT usTCPPort)</td></tr>
+<tr class="memdesc:gab06a2d0ef8bdfd866cd934f0ec7e7a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the Modbus protocol stack for Modbus TCP.  <br /></td></tr>
+<tr class="separator:gab06a2d0ef8bdfd866cd934f0ec7e7a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac20080d92be2934456e2a5d27cd36310" id="r_gac20080d92be2934456e2a5d27cd36310"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#gac20080d92be2934456e2a5d27cd36310">eMBClose</a> (void)</td></tr>
+<tr class="memdesc:gac20080d92be2934456e2a5d27cd36310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release resources used by the protocol stack.  <br /></td></tr>
+<tr class="separator:gac20080d92be2934456e2a5d27cd36310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab697be370833d562e6b016626d996132" id="r_gab697be370833d562e6b016626d996132"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#gab697be370833d562e6b016626d996132">eMBEnable</a> (void)</td></tr>
+<tr class="memdesc:gab697be370833d562e6b016626d996132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the Modbus protocol stack.  <br /></td></tr>
+<tr class="separator:gab697be370833d562e6b016626d996132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabcc2a31ec41fc276ab3c3ac705defdf3" id="r_gabcc2a31ec41fc276ab3c3ac705defdf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#gabcc2a31ec41fc276ab3c3ac705defdf3">eMBDisable</a> (void)</td></tr>
+<tr class="memdesc:gabcc2a31ec41fc276ab3c3ac705defdf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the Modbus protocol stack.  <br /></td></tr>
+<tr class="separator:gabcc2a31ec41fc276ab3c3ac705defdf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12648c98d45f768ba878fbcee46caca5" id="r_ga12648c98d45f768ba878fbcee46caca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#ga12648c98d45f768ba878fbcee46caca5">eMBPoll</a> (void)</td></tr>
+<tr class="memdesc:ga12648c98d45f768ba878fbcee46caca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main pooling loop of the Modbus protocol stack.  <br /></td></tr>
+<tr class="separator:ga12648c98d45f768ba878fbcee46caca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe2b0e2dccf23d506666aa3cfdf6a8a3" id="r_gabe2b0e2dccf23d506666aa3cfdf6a8a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#gabe2b0e2dccf23d506666aa3cfdf6a8a3">eMBSetSlaveID</a> (UCHAR ucSlaveID, BOOL xIsRunning, UCHAR const *pucAdditional, USHORT usAdditionalLen)</td></tr>
+<tr class="memdesc:gabe2b0e2dccf23d506666aa3cfdf6a8a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the slave id of the device.  <br /></td></tr>
+<tr class="separator:gabe2b0e2dccf23d506666aa3cfdf6a8a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f6e66893b2388a602ac453253a00784" id="r_ga5f6e66893b2388a602ac453253a00784"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus.html#ga5f6e66893b2388a602ac453253a00784">eMBRegisterCB</a> (UCHAR ucFunctionCode, <a class="el" href="mbproto_8h.html#a9fe16efc84b141d9b9ec804c0ddfa4b1">pxMBFunctionHandler</a> pxHandler)</td></tr>
+<tr class="memdesc:ga5f6e66893b2388a602ac453253a00784"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a callback handler for a given function code.  <br /></td></tr>
+<tr class="separator:ga5f6e66893b2388a602ac453253a00784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7816677520b1eb2ebecf15060a41bc81" id="r_ga7816677520b1eb2ebecf15060a41bc81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus__registers.html#ga7816677520b1eb2ebecf15060a41bc81">eMBRegInputCB</a> (UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNRegs)</td></tr>
+<tr class="memdesc:ga7816677520b1eb2ebecf15060a41bc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function used if the value of a <em>Input Register</em> is required by the protocol stack. The starting register address is given by <code>usAddress</code> and the last register is given by <code>usAddress + usNRegs - 1</code>.  <br /></td></tr>
+<tr class="separator:ga7816677520b1eb2ebecf15060a41bc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10d37e1d80224bf3b1eeb9e246d7582e" id="r_ga10d37e1d80224bf3b1eeb9e246d7582e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus__registers.html#ga10d37e1d80224bf3b1eeb9e246d7582e">eMBRegHoldingCB</a> (UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNRegs, <a class="el" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a> eMode)</td></tr>
+<tr class="memdesc:ga10d37e1d80224bf3b1eeb9e246d7582e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function used if a <em>Holding Register</em> value is read or written by the protocol stack. The starting register address is given by <code>usAddress</code> and the last register is given by <code>usAddress + usNRegs - 1</code>.  <br /></td></tr>
+<tr class="separator:ga10d37e1d80224bf3b1eeb9e246d7582e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88d9b719291515c60eee1bf9ffa1dd02" id="r_ga88d9b719291515c60eee1bf9ffa1dd02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus__registers.html#ga88d9b719291515c60eee1bf9ffa1dd02">eMBRegCoilsCB</a> (UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNCoils, <a class="el" href="group__modbus.html#gaf1398cbbeb317b1dbd0276b275f5b0f8">eMBRegisterMode</a> eMode)</td></tr>
+<tr class="memdesc:ga88d9b719291515c60eee1bf9ffa1dd02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function used if a <em>Coil Register</em> value is read or written by the protocol stack. If you are going to use this function you might use the functions <a class="el" href="group__modbus__utils.html#gaffd1defb8bceb85f1b65d64fa1c895e1" title="Function to set bits in a byte buffer.">xMBUtilSetBits(  )</a> and <a class="el" href="group__modbus__utils.html#ga94b3b43e1d2353e621748c79e2fb4dd5" title="Function to read bits in a byte buffer.">xMBUtilGetBits(  )</a> for working with bitfields.  <br /></td></tr>
+<tr class="separator:ga88d9b719291515c60eee1bf9ffa1dd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38101f5da54af137e210a3b8b9fa3887" id="r_ga38101f5da54af137e210a3b8b9fa3887"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__modbus__registers.html#ga38101f5da54af137e210a3b8b9fa3887">eMBRegDiscreteCB</a> (UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNDiscrete)</td></tr>
+<tr class="memdesc:ga38101f5da54af137e210a3b8b9fa3887"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function used if a <em>Input Discrete Register</em> value is read by the protocol stack.  <br /></td></tr>
+<tr class="separator:ga38101f5da54af137e210a3b8b9fa3887"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

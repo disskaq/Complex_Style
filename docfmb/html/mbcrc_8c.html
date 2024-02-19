@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/rtu/mbcrc.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_eb1c23ca0a22ddb8c4778c40b8b649e1.html">rtu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл mbcrc.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;port.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для mbcrc.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbcrc_8c__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2rtu_2mbcrc_8c" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2rtu_2mbcrc_8c" id="afreemodbus-v1_85_80_2modbus_2rtu_2mbcrc_8c">
+<area shape="rect" title=" " alt="" coords="5,5,182,48"/>
+<area shape="rect" title=" " alt="" coords="66,96,121,123"/>
+<area shape="poly" title=" " alt="" coords="96,49,96,80,91,80,91,49"/>
+</map>
+</div>
+</div>
+<p><a href="mbcrc_8c_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:abc48f359fd99e303016c8b74cc82c3ff" id="r_abc48f359fd99e303016c8b74cc82c3ff"><td class="memItemLeft" align="right" valign="top">USHORT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc48f359fd99e303016c8b74cc82c3ff">usMBCRC16</a> (UCHAR *pucFrame, USHORT usLen)</td></tr>
+<tr class="separator:abc48f359fd99e303016c8b74cc82c3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a3c8c243843ff5f7d637d6e515468a6e0" id="r_a3c8c243843ff5f7d637d6e515468a6e0"><td class="memItemLeft" align="right" valign="top">static const UCHAR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c8c243843ff5f7d637d6e515468a6e0">aucCRCHi</a> []</td></tr>
+<tr class="separator:a3c8c243843ff5f7d637d6e515468a6e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7191e1b186e144f5c19d1fc78c09719" id="r_ac7191e1b186e144f5c19d1fc78c09719"><td class="memItemLeft" align="right" valign="top">static const UCHAR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7191e1b186e144f5c19d1fc78c09719">aucCRCLo</a> []</td></tr>
+<tr class="separator:ac7191e1b186e144f5c19d1fc78c09719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="abc48f359fd99e303016c8b74cc82c3ff" name="abc48f359fd99e303016c8b74cc82c3ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc48f359fd99e303016c8b74cc82c3ff">&#9670;&#160;</a></span>usMBCRC16()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">USHORT usMBCRC16 </td>
+          <td>(</td>
+          <td class="paramtype">UCHAR *</td>          <td class="paramname"><span class="paramname"><em>pucFrame</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">USHORT</td>          <td class="paramname"><span class="paramname"><em>usLen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbcrc_8c_source.html">mbcrc.c</a> строка <a class="el" href="mbcrc_8c_source.html#l00085">85</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   86</span>{</div>
+<div class="line"><span class="lineno">   87</span>    UCHAR           ucCRCHi = 0xFF;</div>
+<div class="line"><span class="lineno">   88</span>    UCHAR           ucCRCLo = 0xFF;</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordtype">int</span>             iIndex;</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">while</span>( usLen-- )</div>
+<div class="line"><span class="lineno">   92</span>    {</div>
+<div class="line"><span class="lineno">   93</span>        iIndex = ucCRCLo ^ *( pucFrame++ );</div>
+<div class="line"><span class="lineno">   94</span>        ucCRCLo = ( UCHAR )( ucCRCHi ^ <a class="code hl_variable" href="#a3c8c243843ff5f7d637d6e515468a6e0">aucCRCHi</a>[iIndex] );</div>
+<div class="line"><span class="lineno">   95</span>        ucCRCHi = <a class="code hl_variable" href="#ac7191e1b186e144f5c19d1fc78c09719">aucCRCLo</a>[iIndex];</div>
+<div class="line"><span class="lineno">   96</span>    }</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">return</span> ( USHORT )( ucCRCHi &lt;&lt; 8 | ucCRCLo );</div>
+<div class="line"><span class="lineno">   98</span>}</div>
+<div class="ttc" id="ambcrc_8c_html_a3c8c243843ff5f7d637d6e515468a6e0"><div class="ttname"><a href="#a3c8c243843ff5f7d637d6e515468a6e0">aucCRCHi</a></div><div class="ttdeci">static const UCHAR aucCRCHi[]</div><div class="ttdef"><b>Definition</b> <a href="mbcrc_8c_source.html#l00034">mbcrc.c:34</a></div></div>
+<div class="ttc" id="ambcrc_8c_html_ac7191e1b186e144f5c19d1fc78c09719"><div class="ttname"><a href="#ac7191e1b186e144f5c19d1fc78c09719">aucCRCLo</a></div><div class="ttdeci">static const UCHAR aucCRCLo[]</div><div class="ttdef"><b>Definition</b> <a href="mbcrc_8c_source.html#l00059">mbcrc.c:59</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbcrc_8c_abc48f359fd99e303016c8b74cc82c3ff_icgraph.png" border="0" usemap="#ambcrc_8c_abc48f359fd99e303016c8b74cc82c3ff_icgraph" alt=""/></div>
+<map name="ambcrc_8c_abc48f359fd99e303016c8b74cc82c3ff_icgraph" id="ambcrc_8c_abc48f359fd99e303016c8b74cc82c3ff_icgraph">
+<area shape="rect" title=" " alt="" coords="285,31,381,57"/>
+<area shape="rect" href="mbrtu_8c.html#a669fd79aadbd1cc49ac4f11382dc15d9" title=" " alt="" coords="119,5,237,32"/>
+<area shape="poly" title=" " alt="" coords="269,36,237,31,238,26,270,31"/>
+<area shape="rect" href="mbrtu_8c.html#a6feb0c70f52d3ef74da1cfbdc10d1ab0" title=" " alt="" coords="126,56,230,83"/>
+<area shape="poly" title=" " alt="" coords="270,57,230,64,229,58,269,52"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,31,71,57"/>
+<area shape="poly" title=" " alt="" coords="104,35,72,41,71,36,103,30"/>
+<area shape="poly" title=" " alt="" coords="110,60,71,52,72,47,111,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a3c8c243843ff5f7d637d6e515468a6e0" name="a3c8c243843ff5f7d637d6e515468a6e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8c243843ff5f7d637d6e515468a6e0">&#9670;&#160;</a></span>aucCRCHi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UCHAR aucCRCHi[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line">    0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line">    0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line">    0x00, 0xC1, 0x81, 0x40</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="mbcrc_8c_source.html">mbcrc.c</a> строка <a class="el" href="mbcrc_8c_source.html#l00034">34</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>                                {</div>
+<div class="line"><span class="lineno">   35</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   36</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><span class="lineno">   37</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   38</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   39</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   40</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><span class="lineno">   41</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><span class="lineno">   42</span>    0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><span class="lineno">   43</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   44</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><span class="lineno">   45</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   46</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line"><span class="lineno">   47</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   48</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line"><span class="lineno">   49</span>    0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   50</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   51</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line"><span class="lineno">   52</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><span class="lineno">   53</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   54</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   55</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><span class="lineno">   56</span>    0x00, 0xC1, 0x81, 0x40</div>
+<div class="line"><span class="lineno">   57</span>};</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac7191e1b186e144f5c19d1fc78c09719" name="ac7191e1b186e144f5c19d1fc78c09719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7191e1b186e144f5c19d1fc78c09719">&#9670;&#160;</a></span>aucCRCLo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const UCHAR aucCRCLo[]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Инициализатор</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06, 0x07, 0xC7,</div>
+<div class="line">    0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD, 0x0F, 0xCF, 0xCE, 0x0E,</div>
+<div class="line">    0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09, 0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9,</div>
+<div class="line">    0x1B, 0xDB, 0xDA, 0x1A, 0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC,</div>
+<div class="line">    0x14, 0xD4, 0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,</div>
+<div class="line">    0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3, 0xF2, 0x32,</div>
+<div class="line">    0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4, 0x3C, 0xFC, 0xFD, 0x3D,</div>
+<div class="line">    0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A, 0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, </div>
+<div class="line">    0x28, 0xE8, 0xE9, 0x29, 0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF,</div>
+<div class="line">    0x2D, 0xED, 0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,</div>
+<div class="line">    0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60, 0x61, 0xA1,</div>
+<div class="line">    0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67, 0xA5, 0x65, 0x64, 0xA4,</div>
+<div class="line">    0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F, 0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, </div>
+<div class="line">    0x69, 0xA9, 0xA8, 0x68, 0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA,</div>
+<div class="line">    0xBE, 0x7E, 0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,</div>
+<div class="line">    0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71, 0x70, 0xB0,</div>
+<div class="line">    0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92, 0x96, 0x56, 0x57, 0x97,</div>
+<div class="line">    0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C, 0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E,</div>
+<div class="line">    0x5A, 0x9A, 0x9B, 0x5B, 0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89,</div>
+<div class="line">    0x4B, 0x8B, 0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,</div>
+<div class="line">    0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42, 0x43, 0x83,</div>
+<div class="line">    0x41, 0x81, 0x80, 0x40</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">См. определение в файле <a class="el" href="mbcrc_8c_source.html">mbcrc.c</a> строка <a class="el" href="mbcrc_8c_source.html#l00059">59</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   59</span>                                {</div>
+<div class="line"><span class="lineno">   60</span>    0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06, 0x07, 0xC7,</div>
+<div class="line"><span class="lineno">   61</span>    0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD, 0x0F, 0xCF, 0xCE, 0x0E,</div>
+<div class="line"><span class="lineno">   62</span>    0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09, 0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9,</div>
+<div class="line"><span class="lineno">   63</span>    0x1B, 0xDB, 0xDA, 0x1A, 0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC,</div>
+<div class="line"><span class="lineno">   64</span>    0x14, 0xD4, 0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,</div>
+<div class="line"><span class="lineno">   65</span>    0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3, 0xF2, 0x32,</div>
+<div class="line"><span class="lineno">   66</span>    0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4, 0x3C, 0xFC, 0xFD, 0x3D,</div>
+<div class="line"><span class="lineno">   67</span>    0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A, 0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, </div>
+<div class="line"><span class="lineno">   68</span>    0x28, 0xE8, 0xE9, 0x29, 0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF,</div>
+<div class="line"><span class="lineno">   69</span>    0x2D, 0xED, 0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,</div>
+<div class="line"><span class="lineno">   70</span>    0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60, 0x61, 0xA1,</div>
+<div class="line"><span class="lineno">   71</span>    0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67, 0xA5, 0x65, 0x64, 0xA4,</div>
+<div class="line"><span class="lineno">   72</span>    0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F, 0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, </div>
+<div class="line"><span class="lineno">   73</span>    0x69, 0xA9, 0xA8, 0x68, 0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA,</div>
+<div class="line"><span class="lineno">   74</span>    0xBE, 0x7E, 0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,</div>
+<div class="line"><span class="lineno">   75</span>    0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71, 0x70, 0xB0,</div>
+<div class="line"><span class="lineno">   76</span>    0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92, 0x96, 0x56, 0x57, 0x97,</div>
+<div class="line"><span class="lineno">   77</span>    0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C, 0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E,</div>
+<div class="line"><span class="lineno">   78</span>    0x5A, 0x9A, 0x9B, 0x5B, 0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89,</div>
+<div class="line"><span class="lineno">   79</span>    0x4B, 0x8B, 0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,</div>
+<div class="line"><span class="lineno">   80</span>    0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42, 0x43, 0x83,</div>
+<div class="line"><span class="lineno">   81</span>    0x41, 0x81, 0x80, 0x40</div>
+<div class="line"><span class="lineno">   82</span>};</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

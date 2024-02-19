@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Исходный файл freemodbus-v1.5.0/modbus/rtu/mbcrc.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_eb1c23ca0a22ddb8c4778c40b8b649e1.html">rtu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">mbcrc.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mbcrc_8c.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * FreeModbus Libary: A portable Modbus implementation for Modbus ASCII/RTU.</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * Copyright (c) 2006 Christian Walter &lt;wolti@sil.at&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * All rights reserved.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Redistribution and use in source and binary forms, with or without</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * modification, are permitted provided that the following conditions</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * are met:</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * 1. Redistributions of source code must retain the above copyright</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *    notice, this list of conditions and the following disclaimer.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * 2. Redistributions in binary form must reproduce the above copyright</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> *    notice, this list of conditions and the following disclaimer in the</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *    documentation and/or other materials provided with the distribution.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * 3. The name of the author may not be used to endorse or promote products</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> *    derived from this software without specific prior written permission.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS&#39;&#39; AND ANY EXPRESS OR</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> * File: $Id: mbcrc.c,v 1.7 2007/02/18 23:50:27 wolti Exp $</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">/* ----------------------- Platform includes --------------------------------*/</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;port.h&quot;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="mbcrc_8c.html#a3c8c243843ff5f7d637d6e515468a6e0">   34</a></span><span class="keyword">static</span> <span class="keyword">const</span> UCHAR <a class="code hl_variable" href="mbcrc_8c.html#a3c8c243843ff5f7d637d6e515468a6e0">aucCRCHi</a>[] = {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    0x00, 0xC1, 0x81, 0x40</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
+</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="mbcrc_8c.html#ac7191e1b186e144f5c19d1fc78c09719">   59</a></span><span class="keyword">static</span> <span class="keyword">const</span> UCHAR <a class="code hl_variable" href="mbcrc_8c.html#ac7191e1b186e144f5c19d1fc78c09719">aucCRCLo</a>[] = {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06, 0x07, 0xC7,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD, 0x0F, 0xCF, 0xCE, 0x0E,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09, 0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    0x1B, 0xDB, 0xDA, 0x1A, 0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    0x14, 0xD4, 0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3, 0xF2, 0x32,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4, 0x3C, 0xFC, 0xFD, 0x3D,</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A, 0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    0x28, 0xE8, 0xE9, 0x29, 0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    0x2D, 0xED, 0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60, 0x61, 0xA1,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67, 0xA5, 0x65, 0x64, 0xA4,</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F, 0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    0x69, 0xA9, 0xA8, 0x68, 0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    0xBE, 0x7E, 0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71, 0x70, 0xB0,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92, 0x96, 0x56, 0x57, 0x97,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C, 0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E,</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    0x5A, 0x9A, 0x9B, 0x5B, 0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    0x4B, 0x8B, 0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42, 0x43, 0x83,</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    0x41, 0x81, 0x80, 0x40</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
+</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>USHORT</div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff">   85</a></span><a class="code hl_function" href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff">usMBCRC16</a>( UCHAR * pucFrame, USHORT usLen )</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    UCHAR           ucCRCHi = 0xFF;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    UCHAR           ucCRCLo = 0xFF;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">int</span>             iIndex;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordflow">while</span>( usLen-- )</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        iIndex = ucCRCLo ^ *( pucFrame++ );</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        ucCRCLo = ( UCHAR )( ucCRCHi ^ <a class="code hl_variable" href="mbcrc_8c.html#a3c8c243843ff5f7d637d6e515468a6e0">aucCRCHi</a>[iIndex] );</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        ucCRCHi = <a class="code hl_variable" href="mbcrc_8c.html#ac7191e1b186e144f5c19d1fc78c09719">aucCRCLo</a>[iIndex];</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> ( USHORT )( ucCRCHi &lt;&lt; 8 | ucCRCLo );</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="ttc" id="ambcrc_8c_html_a3c8c243843ff5f7d637d6e515468a6e0"><div class="ttname"><a href="mbcrc_8c.html#a3c8c243843ff5f7d637d6e515468a6e0">aucCRCHi</a></div><div class="ttdeci">static const UCHAR aucCRCHi[]</div><div class="ttdef"><b>Definition</b> <a href="#l00034">mbcrc.c:34</a></div></div>
+<div class="ttc" id="ambcrc_8c_html_abc48f359fd99e303016c8b74cc82c3ff"><div class="ttname"><a href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff">usMBCRC16</a></div><div class="ttdeci">USHORT usMBCRC16(UCHAR *pucFrame, USHORT usLen)</div><div class="ttdef"><b>Definition</b> <a href="#l00085">mbcrc.c:85</a></div></div>
+<div class="ttc" id="ambcrc_8c_html_ac7191e1b186e144f5c19d1fc78c09719"><div class="ttname"><a href="mbcrc_8c.html#ac7191e1b186e144f5c19d1fc78c09719">aucCRCLo</a></div><div class="ttdeci">static const UCHAR aucCRCLo[]</div><div class="ttdef"><b>Definition</b> <a href="#l00059">mbcrc.c:59</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$class_socket.html" title=" " alt="" coords="5,56,68,83"/>
+<area shape="rect" id="Node000001" href="$class_communicating_socket.html" title=" " alt="" coords="116,31,268,57"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="82,59,115,54,116,59,83,65"/>
+<area shape="rect" id="Node000004" href="$class_t_c_p_server_socket.html" title=" " alt="" coords="130,81,254,108"/>
+<area shape="poly" id="edge5_Node000000_Node000004" title=" " alt="" coords="84,74,131,82,130,87,83,79"/>
+<area shape="rect" id="Node000002" href="$class_t_c_p_socket.html" title=" " alt="" coords="317,5,404,32"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="283,28,316,23,317,28,284,33"/>
+<area shape="rect" id="Node000003" href="$class_u_d_p_socket.html" title=" " alt="" coords="316,56,405,83"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="284,55,316,60,315,65,283,60"/>
+</map>

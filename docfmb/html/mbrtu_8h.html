@@ -1,0 +1,787 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>freemodbus: Файл freemodbus-v1.5.0/modbus/rtu/mbrtu.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">freemodbus
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e15da0c04fcf3530559bdb8397602a27.html">freemodbus-v1.5.0</a></li><li class="navelem"><a class="el" href="dir_ad1e619b62baad98eaffd456f68f34e7.html">modbus</a></li><li class="navelem"><a class="el" href="dir_eb1c23ca0a22ddb8c4778c40b8b649e1.html">rtu</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл mbrtu.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h__dep__incl.png" border="0" usemap="#afreemodbus-v1_85_80_2modbus_2rtu_2mbrtu_8hdep" alt=""/></div>
+<map name="afreemodbus-v1_85_80_2modbus_2rtu_2mbrtu_8hdep" id="afreemodbus-v1_85_80_2modbus_2rtu_2mbrtu_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,182,48"/>
+<area shape="rect" href="mbrtu_8c.html" title=" " alt="" coords="5,96,182,139"/>
+<area shape="poly" title=" " alt="" coords="96,64,96,96,91,96,91,64"/>
+</map>
+</div>
+</div>
+<p><a href="mbrtu_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:af4e46e995945c96d9f8bc98a6444ebfe" id="r_af4e46e995945c96d9f8bc98a6444ebfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4e46e995945c96d9f8bc98a6444ebfe">eMBRTUInit</a> (UCHAR slaveAddress, UCHAR ucPort, ULONG ulBaudRate, <a class="el" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a> eParity)</td></tr>
+<tr class="separator:af4e46e995945c96d9f8bc98a6444ebfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae342bae030ea291a6e8a2fe3d2d0abeb" id="r_ae342bae030ea291a6e8a2fe3d2d0abeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae342bae030ea291a6e8a2fe3d2d0abeb">eMBRTUStart</a> (void)</td></tr>
+<tr class="separator:ae342bae030ea291a6e8a2fe3d2d0abeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d44ef4747b7202d37142ef1aaea493b" id="r_a3d44ef4747b7202d37142ef1aaea493b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d44ef4747b7202d37142ef1aaea493b">eMBRTUStop</a> (void)</td></tr>
+<tr class="separator:a3d44ef4747b7202d37142ef1aaea493b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a669fd79aadbd1cc49ac4f11382dc15d9" id="r_a669fd79aadbd1cc49ac4f11382dc15d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a669fd79aadbd1cc49ac4f11382dc15d9">eMBRTUReceive</a> (UCHAR *pucRcvAddress, UCHAR **pucFrame, USHORT *pusLength)</td></tr>
+<tr class="separator:a669fd79aadbd1cc49ac4f11382dc15d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3b213ec4f604000413f117aaa64c93" id="r_a1c3b213ec4f604000413f117aaa64c93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c3b213ec4f604000413f117aaa64c93">eMBRTUSend</a> (UCHAR slaveAddress, const UCHAR *pucFrame, USHORT usLength)</td></tr>
+<tr class="separator:a1c3b213ec4f604000413f117aaa64c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a447f45f582daab2600cad612b00120b0" id="r_a447f45f582daab2600cad612b00120b0"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a447f45f582daab2600cad612b00120b0">xMBRTUReceiveFSM</a> (void)</td></tr>
+<tr class="separator:a447f45f582daab2600cad612b00120b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a663e5daf0be0f2426a72c531c91d423f" id="r_a663e5daf0be0f2426a72c531c91d423f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a663e5daf0be0f2426a72c531c91d423f">xMBRTUTransmitFSM</a> (void)</td></tr>
+<tr class="separator:a663e5daf0be0f2426a72c531c91d423f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f1ff6643990316db64ebcbcf8419af2" id="r_a5f1ff6643990316db64ebcbcf8419af2"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f1ff6643990316db64ebcbcf8419af2">xMBRTUTimerT15Expired</a> (void)</td></tr>
+<tr class="separator:a5f1ff6643990316db64ebcbcf8419af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6302a8b67c6b82ae49e6c9d6a9795da" id="r_ac6302a8b67c6b82ae49e6c9d6a9795da"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6302a8b67c6b82ae49e6c9d6a9795da">xMBRTUTimerT35Expired</a> (void)</td></tr>
+<tr class="separator:ac6302a8b67c6b82ae49e6c9d6a9795da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="af4e46e995945c96d9f8bc98a6444ebfe" name="af4e46e995945c96d9f8bc98a6444ebfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4e46e995945c96d9f8bc98a6444ebfe">&#9670;&#160;</a></span>eMBRTUInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eMBRTUInit </td>
+          <td>(</td>
+          <td class="paramtype">UCHAR</td>          <td class="paramname"><span class="paramname"><em>slaveAddress</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UCHAR</td>          <td class="paramname"><span class="paramname"><em>ucPort</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ULONG</td>          <td class="paramname"><span class="paramname"><em>ulBaudRate</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__modbus.html#ga16ba85fa56bcd52a11a12576af445ccb">eMBParity</a></td>          <td class="paramname"><span class="paramname"><em>eParity</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00081">81</a></p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>{</div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a>;</div>
+<div class="line"><span class="lineno">   84</span>    ULONG           usTimerT35_50us;</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>    ( void )ucSlaveAddress;</div>
+<div class="line"><span class="lineno">   87</span>    ENTER_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    <span class="comment">/* Modbus RTU uses 8 Databits. */</span></div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span>( <a class="code hl_function" href="mbport_8h.html#af614e62c57eaba86f45c45e5d0e6cfd9">xMBPortSerialInit</a>( ucPort, ulBaudRate, 8, eParity ) != TRUE )</div>
+<div class="line"><span class="lineno">   91</span>    {</div>
+<div class="line"><span class="lineno">   92</span>        eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">MB_EPORTERR</a>;</div>
+<div class="line"><span class="lineno">   93</span>    }</div>
+<div class="line"><span class="lineno">   94</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   95</span>    {</div>
+<div class="line"><span class="lineno">   96</span>        <span class="comment">/* If baudrate &gt; 19200 then we should use the fixed timer values</span></div>
+<div class="line"><span class="lineno">   97</span><span class="comment">         * t35 = 1750us. Otherwise t35 must be 3.5 times the character time.</span></div>
+<div class="line"><span class="lineno">   98</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">if</span>( ulBaudRate &gt; 19200 )</div>
+<div class="line"><span class="lineno">  100</span>        {</div>
+<div class="line"><span class="lineno">  101</span>            usTimerT35_50us = 35;       <span class="comment">/* 1800us. */</span></div>
+<div class="line"><span class="lineno">  102</span>        }</div>
+<div class="line"><span class="lineno">  103</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  104</span>        {</div>
+<div class="line"><span class="lineno">  105</span>            <span class="comment">/* The timer reload value for a character is given by:</span></div>
+<div class="line"><span class="lineno">  106</span><span class="comment">             *</span></div>
+<div class="line"><span class="lineno">  107</span><span class="comment">             * ChTimeValue = Ticks_per_1s / ( Baudrate / 11 )</span></div>
+<div class="line"><span class="lineno">  108</span><span class="comment">             *             = 11 * Ticks_per_1s / Baudrate</span></div>
+<div class="line"><span class="lineno">  109</span><span class="comment">             *             = 220000 / Baudrate</span></div>
+<div class="line"><span class="lineno">  110</span><span class="comment">             * The reload for t3.5 is 1.5 times this value and similary</span></div>
+<div class="line"><span class="lineno">  111</span><span class="comment">             * for t3.5.</span></div>
+<div class="line"><span class="lineno">  112</span><span class="comment">             */</span></div>
+<div class="line"><span class="lineno">  113</span>            usTimerT35_50us = ( 7UL * 220000UL ) / ( 2UL * ulBaudRate );</div>
+<div class="line"><span class="lineno">  114</span>        }</div>
+<div class="line"><span class="lineno">  115</span>        <span class="keywordflow">if</span>( <a class="code hl_function" href="mbport_8h.html#a93d8e78fe43e66fab707da6eda4f5eaf">xMBPortTimersInit</a>( ( USHORT ) usTimerT35_50us ) != TRUE )</div>
+<div class="line"><span class="lineno">  116</span>        {</div>
+<div class="line"><span class="lineno">  117</span>            eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">MB_EPORTERR</a>;</div>
+<div class="line"><span class="lineno">  118</span>        }</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+<div class="line"><span class="lineno">  120</span>    EXIT_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  121</span> </div>
+<div class="line"><span class="lineno">  122</span>    <span class="keywordflow">return</span> eStatus;</div>
+<div class="line"><span class="lineno">  123</span>}</div>
+<div class="ttc" id="agroup__modbus_html_ga9e7fce8c431cb0e521c67f7f36dd823d"><div class="ttname"><a href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a></div><div class="ttdeci">eMBErrorCode</div><div class="ttdoc">Errorcodes used by all function in the protocol stack.</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00112">mb.h:113</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823da539fb138411468b12c05556157c6864d">MB_EPORTERR</a></div><div class="ttdeci">@ MB_EPORTERR</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00117">mb.h:117</a></div></div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a></div><div class="ttdeci">@ MB_ENOERR</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00114">mb.h:114</a></div></div>
+<div class="ttc" id="ambport_8h_html_a93d8e78fe43e66fab707da6eda4f5eaf"><div class="ttname"><a href="mbport_8h.html#a93d8e78fe43e66fab707da6eda4f5eaf">xMBPortTimersInit</a></div><div class="ttdeci">BOOL xMBPortTimersInit(USHORT usTimeOut50us)</div></div>
+<div class="ttc" id="ambport_8h_html_af614e62c57eaba86f45c45e5d0e6cfd9"><div class="ttname"><a href="mbport_8h.html#af614e62c57eaba86f45c45e5d0e6cfd9">xMBPortSerialInit</a></div><div class="ttdeci">BOOL xMBPortSerialInit(UCHAR ucPort, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity eParity)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_cgraph.png" border="0" usemap="#ambrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_cgraph" alt=""/></div>
+<map name="ambrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_cgraph" id="ambrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,96,57"/>
+<area shape="rect" href="mbport_8h.html#af614e62c57eaba86f45c45e5d0e6cfd9" title=" " alt="" coords="147,5,269,32"/>
+<area shape="poly" title=" " alt="" coords="96,34,131,28,131,34,97,39"/>
+<area shape="rect" href="mbport_8h.html#a93d8e78fe43e66fab707da6eda4f5eaf" title=" " alt="" coords="144,56,272,83"/>
+<area shape="poly" title=" " alt="" coords="97,49,129,54,128,59,96,54"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_icgraph.png" border="0" usemap="#ambrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_icgraph" alt=""/></div>
+<map name="ambrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_icgraph" id="ambrtu_8h_af4e46e995945c96d9f8bc98a6444ebfe_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,209,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a669fd79aadbd1cc49ac4f11382dc15d9" name="a669fd79aadbd1cc49ac4f11382dc15d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a669fd79aadbd1cc49ac4f11382dc15d9">&#9670;&#160;</a></span>eMBRTUReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eMBRTUReceive </td>
+          <td>(</td>
+          <td class="paramtype">UCHAR *</td>          <td class="paramname"><span class="paramname"><em>pucRcvAddress</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UCHAR **</td>          <td class="paramname"><span class="paramname"><em>pucFrame</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">USHORT *</td>          <td class="paramname"><span class="paramname"><em>pusLength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00151">151</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  152</span>{</div>
+<div class="line"><span class="lineno">  153</span>    BOOL            xFrameReceived = FALSE;</div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a>;</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    ENTER_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  157</span>    assert( <a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a> &lt; <a class="code hl_define" href="mbrtu_8c.html#ad7e9cfdbd55413153a9a862d824a149f">MB_SER_PDU_SIZE_MAX</a> );</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    <span class="comment">/* Length and CRC check */</span></div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">if</span>( ( <a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a> &gt;= <a class="code hl_define" href="mbrtu_8c.html#ae0dc27c9b034c5177638e9eef79d48a7">MB_SER_PDU_SIZE_MIN</a> )</div>
+<div class="line"><span class="lineno">  161</span>        &amp;&amp; ( <a class="code hl_function" href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff">usMBCRC16</a>( ( UCHAR * ) <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>, <a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a> ) == 0 ) )</div>
+<div class="line"><span class="lineno">  162</span>    {</div>
+<div class="line"><span class="lineno">  163</span>        <span class="comment">/* Save the address field. All frames are passed to the upper layed</span></div>
+<div class="line"><span class="lineno">  164</span><span class="comment">         * and the decision if a frame is used is done there.</span></div>
+<div class="line"><span class="lineno">  165</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  166</span>        *pucRcvAddress = <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>[<a class="code hl_define" href="mbrtu_8c.html#afd3d56d60a90ce4cb9858d305f446630">MB_SER_PDU_ADDR_OFF</a>];</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>        <span class="comment">/* Total length of Modbus-PDU is Modbus-Serial-Line-PDU minus</span></div>
+<div class="line"><span class="lineno">  169</span><span class="comment">         * size of address field and CRC checksum.</span></div>
+<div class="line"><span class="lineno">  170</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  171</span>        *pusLength = ( USHORT )( <a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a> - <a class="code hl_define" href="mbrtu_8c.html#ab20d539d6366275b4f75f181908ca207">MB_SER_PDU_PDU_OFF</a> - <a class="code hl_define" href="mbrtu_8c.html#afc5bf40f988e11036cdd8a44c1402d52">MB_SER_PDU_SIZE_CRC</a> );</div>
+<div class="line"><span class="lineno">  172</span> </div>
+<div class="line"><span class="lineno">  173</span>        <span class="comment">/* Return the start of the Modbus PDU to the caller. */</span></div>
+<div class="line"><span class="lineno">  174</span>        *pucFrame = ( UCHAR * ) &amp; <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>[<a class="code hl_define" href="mbrtu_8c.html#ab20d539d6366275b4f75f181908ca207">MB_SER_PDU_PDU_OFF</a>];</div>
+<div class="line"><span class="lineno">  175</span>        xFrameReceived = TRUE;</div>
+<div class="line"><span class="lineno">  176</span>    }</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  178</span>    {</div>
+<div class="line"><span class="lineno">  179</span>        eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">MB_EIO</a>;</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="line"><span class="lineno">  181</span> </div>
+<div class="line"><span class="lineno">  182</span>    EXIT_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">return</span> eStatus;</div>
+<div class="line"><span class="lineno">  184</span>}</div>
+<div class="ttc" id="agroup__modbus_html_gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67"><div class="ttname"><a href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">MB_EIO</a></div><div class="ttdeci">@ MB_EIO</div><div class="ttdef"><b>Definition</b> <a href="mb_8h_source.html#l00119">mb.h:119</a></div></div>
+<div class="ttc" id="ambcrc_8c_html_abc48f359fd99e303016c8b74cc82c3ff"><div class="ttname"><a href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff">usMBCRC16</a></div><div class="ttdeci">USHORT usMBCRC16(UCHAR *pucFrame, USHORT usLen)</div><div class="ttdef"><b>Definition</b> <a href="mbcrc_8c_source.html#l00085">mbcrc.c:85</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_a0fa63f7bfbfea7ac20cce55d94cf3d53"><div class="ttname"><a href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a></div><div class="ttdeci">volatile UCHAR ucRTUBuf[MB_SER_PDU_SIZE_MAX]</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00072">mbrtu.c:72</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_a18e87488a0c8bf30709e36306721e661"><div class="ttname"><a href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a></div><div class="ttdeci">static volatile USHORT usRcvBufferPos</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00077">mbrtu.c:77</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ab20d539d6366275b4f75f181908ca207"><div class="ttname"><a href="mbrtu_8c.html#ab20d539d6366275b4f75f181908ca207">MB_SER_PDU_PDU_OFF</a></div><div class="ttdeci">#define MB_SER_PDU_PDU_OFF</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00051">mbrtu.c:51</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ad7e9cfdbd55413153a9a862d824a149f"><div class="ttname"><a href="mbrtu_8c.html#ad7e9cfdbd55413153a9a862d824a149f">MB_SER_PDU_SIZE_MAX</a></div><div class="ttdeci">#define MB_SER_PDU_SIZE_MAX</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00048">mbrtu.c:48</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ae0dc27c9b034c5177638e9eef79d48a7"><div class="ttname"><a href="mbrtu_8c.html#ae0dc27c9b034c5177638e9eef79d48a7">MB_SER_PDU_SIZE_MIN</a></div><div class="ttdeci">#define MB_SER_PDU_SIZE_MIN</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00047">mbrtu.c:47</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_afc5bf40f988e11036cdd8a44c1402d52"><div class="ttname"><a href="mbrtu_8c.html#afc5bf40f988e11036cdd8a44c1402d52">MB_SER_PDU_SIZE_CRC</a></div><div class="ttdeci">#define MB_SER_PDU_SIZE_CRC</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00049">mbrtu.c:49</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_afd3d56d60a90ce4cb9858d305f446630"><div class="ttname"><a href="mbrtu_8c.html#afd3d56d60a90ce4cb9858d305f446630">MB_SER_PDU_ADDR_OFF</a></div><div class="ttdeci">#define MB_SER_PDU_ADDR_OFF</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00050">mbrtu.c:50</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_cgraph.png" border="0" usemap="#ambrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_cgraph" alt=""/></div>
+<map name="ambrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_cgraph" id="ambrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,124,32"/>
+<area shape="rect" href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff" title=" " alt="" coords="172,5,268,32"/>
+<area shape="poly" title=" " alt="" coords="124,16,156,16,156,21,124,21"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_icgraph.png" border="0" usemap="#ambrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_icgraph" alt=""/></div>
+<map name="ambrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_icgraph" id="ambrtu_8h_a669fd79aadbd1cc49ac4f11382dc15d9_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,237,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1c3b213ec4f604000413f117aaa64c93" name="a1c3b213ec4f604000413f117aaa64c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c3b213ec4f604000413f117aaa64c93">&#9670;&#160;</a></span>eMBRTUSend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a> eMBRTUSend </td>
+          <td>(</td>
+          <td class="paramtype">UCHAR</td>          <td class="paramname"><span class="paramname"><em>slaveAddress</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const UCHAR *</td>          <td class="paramname"><span class="paramname"><em>pucFrame</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">USHORT</td>          <td class="paramname"><span class="paramname"><em>usLength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00187">187</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  188</span>{</div>
+<div class="line"><span class="lineno">  189</span>    <a class="code hl_enumeration" href="group__modbus.html#ga9e7fce8c431cb0e521c67f7f36dd823d">eMBErrorCode</a>    eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823dabf4c1fb8c72eafc08be972225613fe2b">MB_ENOERR</a>;</div>
+<div class="line"><span class="lineno">  190</span>    USHORT          usCRC16;</div>
+<div class="line"><span class="lineno">  191</span> </div>
+<div class="line"><span class="lineno">  192</span>    ENTER_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  193</span> </div>
+<div class="line"><span class="lineno">  194</span>    <span class="comment">/* Check if the receiver is still in idle state. If not we where to</span></div>
+<div class="line"><span class="lineno">  195</span><span class="comment">     * slow with processing the received frame and the master sent another</span></div>
+<div class="line"><span class="lineno">  196</span><span class="comment">     * frame on the network. We have to abort sending the frame.</span></div>
+<div class="line"><span class="lineno">  197</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  198</span>    <span class="keywordflow">if</span>( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> == <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba516714125b01eae93e5cb693fdc3a9e0">STATE_RX_IDLE</a> )</div>
+<div class="line"><span class="lineno">  199</span>    {</div>
+<div class="line"><span class="lineno">  200</span>        <span class="comment">/* First byte before the Modbus-PDU is the slave address. */</span></div>
+<div class="line"><span class="lineno">  201</span>        <a class="code hl_variable" href="mbrtu_8c.html#a3c1d4b58733f636b8c083d35472089f7">pucSndBufferCur</a> = ( UCHAR * ) pucFrame - 1;</div>
+<div class="line"><span class="lineno">  202</span>        <a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a> = 1;</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>        <span class="comment">/* Now copy the Modbus-PDU into the Modbus-Serial-Line-PDU. */</span></div>
+<div class="line"><span class="lineno">  205</span>        <a class="code hl_variable" href="mbrtu_8c.html#a3c1d4b58733f636b8c083d35472089f7">pucSndBufferCur</a>[<a class="code hl_define" href="mbrtu_8c.html#afd3d56d60a90ce4cb9858d305f446630">MB_SER_PDU_ADDR_OFF</a>] = ucSlaveAddress;</div>
+<div class="line"><span class="lineno">  206</span>        <a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a> += usLength;</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>        <span class="comment">/* Calculate CRC16 checksum for Modbus-Serial-Line-PDU. */</span></div>
+<div class="line"><span class="lineno">  209</span>        usCRC16 = <a class="code hl_function" href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff">usMBCRC16</a>( ( UCHAR * ) <a class="code hl_variable" href="mbrtu_8c.html#a3c1d4b58733f636b8c083d35472089f7">pucSndBufferCur</a>, <a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a> );</div>
+<div class="line"><span class="lineno">  210</span>        <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>[<a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a>++] = ( UCHAR )( usCRC16 &amp; 0xFF );</div>
+<div class="line"><span class="lineno">  211</span>        <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>[<a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a>++] = ( UCHAR )( usCRC16 &gt;&gt; 8 );</div>
+<div class="line"><span class="lineno">  212</span> </div>
+<div class="line"><span class="lineno">  213</span>        <span class="comment">/* Activate the transmitter. */</span></div>
+<div class="line"><span class="lineno">  214</span>        <a class="code hl_variable" href="mbrtu_8c.html#a4cb94211b4ab8c9760ea9b134fab58cf">eSndState</a> = <a class="code hl_enumvalue" href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefa99b8ef6f95d0035f9519dcb2889b3a83">STATE_TX_XMIT</a>;</div>
+<div class="line"><span class="lineno">  215</span>        <a class="code hl_function" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a>( FALSE, TRUE );</div>
+<div class="line"><span class="lineno">  216</span>    }</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        eStatus = <a class="code hl_enumvalue" href="group__modbus.html#gga9e7fce8c431cb0e521c67f7f36dd823daf6eed4a1c490af14b7467be1e6e2fe67">MB_EIO</a>;</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="line"><span class="lineno">  221</span>    EXIT_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  222</span>    <span class="keywordflow">return</span> eStatus;</div>
+<div class="line"><span class="lineno">  223</span>}</div>
+<div class="ttc" id="ambport_8h_html_a4bf68bda6b5ed6c341d27d439a6c03df"><div class="ttname"><a href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a></div><div class="ttdeci">void vMBPortSerialEnable(BOOL xRxEnable, BOOL xTxEnable)</div></div>
+<div class="ttc" id="ambrtu_8c_html_a3c1d4b58733f636b8c083d35472089f7"><div class="ttname"><a href="mbrtu_8c.html#a3c1d4b58733f636b8c083d35472089f7">pucSndBufferCur</a></div><div class="ttdeci">static volatile UCHAR * pucSndBufferCur</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00074">mbrtu.c:74</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_a4cb94211b4ab8c9760ea9b134fab58cf"><div class="ttname"><a href="mbrtu_8c.html#a4cb94211b4ab8c9760ea9b134fab58cf">eSndState</a></div><div class="ttdeci">static volatile eMBSndState eSndState</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00069">mbrtu.c:69</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_aaa960901f019f4aada070337f3a98c9c"><div class="ttname"><a href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a></div><div class="ttdeci">static volatile USHORT usSndBufferCount</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00075">mbrtu.c:75</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ac877d5e834a5d5b2f80240c0a90d7fefa99b8ef6f95d0035f9519dcb2889b3a83"><div class="ttname"><a href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefa99b8ef6f95d0035f9519dcb2889b3a83">STATE_TX_XMIT</a></div><div class="ttdeci">@ STATE_TX_XMIT</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00066">mbrtu.c:65</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_acd3c969b4adcde91ff7a9aa4e068be92"><div class="ttname"><a href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a></div><div class="ttdeci">static volatile eMBRcvState eRcvState</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00070">mbrtu.c:70</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ada71af7b20c01523339e4f2ff95feefba516714125b01eae93e5cb693fdc3a9e0"><div class="ttname"><a href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba516714125b01eae93e5cb693fdc3a9e0">STATE_RX_IDLE</a></div><div class="ttdeci">@ STATE_RX_IDLE</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00057">mbrtu.c:57</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a1c3b213ec4f604000413f117aaa64c93_cgraph.png" border="0" usemap="#ambrtu_8h_a1c3b213ec4f604000413f117aaa64c93_cgraph" alt=""/></div>
+<map name="ambrtu_8h_a1c3b213ec4f604000413f117aaa64c93_cgraph" id="ambrtu_8h_a1c3b213ec4f604000413f117aaa64c93_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,109,57"/>
+<area shape="rect" href="mbcrc_8c.html#abc48f359fd99e303016c8b74cc82c3ff" title=" " alt="" coords="180,5,277,32"/>
+<area shape="poly" title=" " alt="" coords="109,34,164,25,165,31,109,39"/>
+<area shape="rect" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df" title=" " alt="" coords="157,56,300,83"/>
+<area shape="poly" title=" " alt="" coords="109,49,142,54,141,59,109,54"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a1c3b213ec4f604000413f117aaa64c93_icgraph.png" border="0" usemap="#ambrtu_8h_a1c3b213ec4f604000413f117aaa64c93_icgraph" alt=""/></div>
+<map name="ambrtu_8h_a1c3b213ec4f604000413f117aaa64c93_icgraph" id="ambrtu_8h_a1c3b213ec4f604000413f117aaa64c93_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,222,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae342bae030ea291a6e8a2fe3d2d0abeb" name="ae342bae030ea291a6e8a2fe3d2d0abeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae342bae030ea291a6e8a2fe3d2d0abeb">&#9670;&#160;</a></span>eMBRTUStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eMBRTUStart </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00126">126</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>{</div>
+<div class="line"><span class="lineno">  128</span>    ENTER_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  129</span>    <span class="comment">/* Initially the receiver is in the state STATE_RX_INIT. we start</span></div>
+<div class="line"><span class="lineno">  130</span><span class="comment">     * the timer and if no character is received within t3.5 we change</span></div>
+<div class="line"><span class="lineno">  131</span><span class="comment">     * to STATE_RX_IDLE. This makes sure that we delay startup of the</span></div>
+<div class="line"><span class="lineno">  132</span><span class="comment">     * modbus protocol stack until the bus is free.</span></div>
+<div class="line"><span class="lineno">  133</span><span class="comment">     */</span></div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> = <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba2b2395354f5e0566929bd52408265fb3">STATE_RX_INIT</a>;</div>
+<div class="line"><span class="lineno">  135</span>    <a class="code hl_function" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a>( TRUE, FALSE );</div>
+<div class="line"><span class="lineno">  136</span>    <a class="code hl_function" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a>(  );</div>
+<div class="line"><span class="lineno">  137</span> </div>
+<div class="line"><span class="lineno">  138</span>    EXIT_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  139</span>}</div>
+<div class="ttc" id="ambport_8h_html_a2356d0d397b3da961b86cabddb9a9760"><div class="ttname"><a href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a></div><div class="ttdeci">void vMBPortTimersEnable(void)</div></div>
+<div class="ttc" id="ambrtu_8c_html_ada71af7b20c01523339e4f2ff95feefba2b2395354f5e0566929bd52408265fb3"><div class="ttname"><a href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba2b2395354f5e0566929bd52408265fb3">STATE_RX_INIT</a></div><div class="ttdeci">@ STATE_RX_INIT</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00056">mbrtu.c:56</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_cgraph.png" border="0" usemap="#ambrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_cgraph" alt=""/></div>
+<map name="ambrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_cgraph" id="ambrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,107,57"/>
+<area shape="rect" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df" title=" " alt="" coords="158,5,301,32"/>
+<area shape="poly" title=" " alt="" coords="107,34,142,29,143,34,108,39"/>
+<area shape="rect" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760" title=" " alt="" coords="155,56,304,83"/>
+<area shape="poly" title=" " alt="" coords="108,49,140,54,139,59,107,54"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_icgraph.png" border="0" usemap="#ambrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_icgraph" alt=""/></div>
+<map name="ambrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_icgraph" id="ambrtu_8h_ae342bae030ea291a6e8a2fe3d2d0abeb_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,220,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3d44ef4747b7202d37142ef1aaea493b" name="a3d44ef4747b7202d37142ef1aaea493b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d44ef4747b7202d37142ef1aaea493b">&#9670;&#160;</a></span>eMBRTUStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eMBRTUStop </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00142">142</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  143</span>{</div>
+<div class="line"><span class="lineno">  144</span>    ENTER_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_function" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a>( FALSE, FALSE );</div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_function" href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523">vMBPortTimersDisable</a>(  );</div>
+<div class="line"><span class="lineno">  147</span>    EXIT_CRITICAL_SECTION(  );</div>
+<div class="line"><span class="lineno">  148</span>}</div>
+<div class="ttc" id="ambport_8h_html_adf96b9d106626e42fa0b7b1a0b802523"><div class="ttname"><a href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523">vMBPortTimersDisable</a></div><div class="ttdeci">void vMBPortTimersDisable(void)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_cgraph.png" border="0" usemap="#ambrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_cgraph" alt=""/></div>
+<map name="ambrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_cgraph" id="ambrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,106,57"/>
+<area shape="rect" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df" title=" " alt="" coords="158,5,302,32"/>
+<area shape="poly" title=" " alt="" coords="106,34,142,29,143,34,106,39"/>
+<area shape="rect" href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523" title=" " alt="" coords="154,56,306,83"/>
+<area shape="poly" title=" " alt="" coords="106,49,138,53,138,59,106,54"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_icgraph.png" border="0" usemap="#ambrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_icgraph" alt=""/></div>
+<map name="ambrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_icgraph" id="ambrtu_8h_a3d44ef4747b7202d37142ef1aaea493b_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,219,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a447f45f582daab2600cad612b00120b0" name="a447f45f582daab2600cad612b00120b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a447f45f582daab2600cad612b00120b0">&#9670;&#160;</a></span>xMBRTUReceiveFSM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL xMBRTUReceiveFSM </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00226">226</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  227</span>{</div>
+<div class="line"><span class="lineno">  228</span>    BOOL            xTaskNeedSwitch = FALSE;</div>
+<div class="line"><span class="lineno">  229</span>    UCHAR           ucByte;</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>    assert( <a class="code hl_variable" href="mbrtu_8c.html#a4cb94211b4ab8c9760ea9b134fab58cf">eSndState</a> == <a class="code hl_enumvalue" href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefab1bd9fcf7cdb346f72d012adfca4767a">STATE_TX_IDLE</a> );</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    <span class="comment">/* Always read the character. */</span></div>
+<div class="line"><span class="lineno">  234</span>    ( void )<a class="code hl_function" href="mbport_8h.html#a4a4724e9dc26b2d2d1cc2a6d41c24770">xMBPortSerialGetByte</a>( ( CHAR * ) &amp; ucByte );</div>
+<div class="line"><span class="lineno">  235</span> </div>
+<div class="line"><span class="lineno">  236</span>    <span class="keywordflow">switch</span> ( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> )</div>
+<div class="line"><span class="lineno">  237</span>    {</div>
+<div class="line"><span class="lineno">  238</span>        <span class="comment">/* If we have received a character in the init state we have to</span></div>
+<div class="line"><span class="lineno">  239</span><span class="comment">         * wait until the frame is finished.</span></div>
+<div class="line"><span class="lineno">  240</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  241</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba2b2395354f5e0566929bd52408265fb3">STATE_RX_INIT</a>:</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_function" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a>(  );</div>
+<div class="line"><span class="lineno">  243</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>        <span class="comment">/* In the error state we wait until all characters in the</span></div>
+<div class="line"><span class="lineno">  246</span><span class="comment">         * damaged frame are transmitted.</span></div>
+<div class="line"><span class="lineno">  247</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefbafbb71fcd5e10dfbcc33a8f5a00df1f95">STATE_RX_ERROR</a>:</div>
+<div class="line"><span class="lineno">  249</span>        <a class="code hl_function" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a>(  );</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  251</span> </div>
+<div class="line"><span class="lineno">  252</span>        <span class="comment">/* In the idle state we wait for a new character. If a character</span></div>
+<div class="line"><span class="lineno">  253</span><span class="comment">         * is received the t1.5 and t3.5 timers are started and the</span></div>
+<div class="line"><span class="lineno">  254</span><span class="comment">         * receiver is in the state STATE_RX_RECEIVCE.</span></div>
+<div class="line"><span class="lineno">  255</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba516714125b01eae93e5cb693fdc3a9e0">STATE_RX_IDLE</a>:</div>
+<div class="line"><span class="lineno">  257</span>        <a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a> = 0;</div>
+<div class="line"><span class="lineno">  258</span>        <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>[<a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a>++] = ucByte;</div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> = <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba6489a66156527784ec30b45fc5ffe43b">STATE_RX_RCV</a>;</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>        <span class="comment">/* Enable t3.5 timers. */</span></div>
+<div class="line"><span class="lineno">  262</span>        <a class="code hl_function" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a>(  );</div>
+<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  264</span> </div>
+<div class="line"><span class="lineno">  265</span>        <span class="comment">/* We are currently receiving a frame. Reset the timer after</span></div>
+<div class="line"><span class="lineno">  266</span><span class="comment">         * every character received. If more than the maximum possible</span></div>
+<div class="line"><span class="lineno">  267</span><span class="comment">         * number of bytes in a modbus frame is received the frame is</span></div>
+<div class="line"><span class="lineno">  268</span><span class="comment">         * ignored.</span></div>
+<div class="line"><span class="lineno">  269</span><span class="comment">         */</span></div>
+<div class="line"><span class="lineno">  270</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba6489a66156527784ec30b45fc5ffe43b">STATE_RX_RCV</a>:</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a> &lt; <a class="code hl_define" href="mbrtu_8c.html#ad7e9cfdbd55413153a9a862d824a149f">MB_SER_PDU_SIZE_MAX</a> )</div>
+<div class="line"><span class="lineno">  272</span>        {</div>
+<div class="line"><span class="lineno">  273</span>            <a class="code hl_variable" href="mbrtu_8c.html#a0fa63f7bfbfea7ac20cce55d94cf3d53">ucRTUBuf</a>[<a class="code hl_variable" href="mbrtu_8c.html#a18e87488a0c8bf30709e36306721e661">usRcvBufferPos</a>++] = ucByte;</div>
+<div class="line"><span class="lineno">  274</span>        }</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> = <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefbafbb71fcd5e10dfbcc33a8f5a00df1f95">STATE_RX_ERROR</a>;</div>
+<div class="line"><span class="lineno">  278</span>        }</div>
+<div class="line"><span class="lineno">  279</span>        <a class="code hl_function" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760">vMBPortTimersEnable</a>(  );</div>
+<div class="line"><span class="lineno">  280</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  281</span>    }</div>
+<div class="line"><span class="lineno">  282</span>    <span class="keywordflow">return</span> xTaskNeedSwitch;</div>
+<div class="line"><span class="lineno">  283</span>}</div>
+<div class="ttc" id="ambport_8h_html_a4a4724e9dc26b2d2d1cc2a6d41c24770"><div class="ttname"><a href="mbport_8h.html#a4a4724e9dc26b2d2d1cc2a6d41c24770">xMBPortSerialGetByte</a></div><div class="ttdeci">BOOL xMBPortSerialGetByte(CHAR *pucByte)</div></div>
+<div class="ttc" id="ambrtu_8c_html_ac877d5e834a5d5b2f80240c0a90d7fefab1bd9fcf7cdb346f72d012adfca4767a"><div class="ttname"><a href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefab1bd9fcf7cdb346f72d012adfca4767a">STATE_TX_IDLE</a></div><div class="ttdeci">@ STATE_TX_IDLE</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00064">mbrtu.c:64</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ada71af7b20c01523339e4f2ff95feefba6489a66156527784ec30b45fc5ffe43b"><div class="ttname"><a href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba6489a66156527784ec30b45fc5ffe43b">STATE_RX_RCV</a></div><div class="ttdeci">@ STATE_RX_RCV</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00058">mbrtu.c:58</a></div></div>
+<div class="ttc" id="ambrtu_8c_html_ada71af7b20c01523339e4f2ff95feefbafbb71fcd5e10dfbcc33a8f5a00df1f95"><div class="ttname"><a href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefbafbb71fcd5e10dfbcc33a8f5a00df1f95">STATE_RX_ERROR</a></div><div class="ttdeci">@ STATE_RX_ERROR</div><div class="ttdef"><b>Definition</b> <a href="mbrtu_8c_source.html#l00060">mbrtu.c:59</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a447f45f582daab2600cad612b00120b0_cgraph.png" border="0" usemap="#ambrtu_8h_a447f45f582daab2600cad612b00120b0_cgraph" alt=""/></div>
+<map name="ambrtu_8h_a447f45f582daab2600cad612b00120b0_cgraph" id="ambrtu_8h_a447f45f582daab2600cad612b00120b0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,152,57"/>
+<area shape="rect" href="mbport_8h.html#a2356d0d397b3da961b86cabddb9a9760" title=" " alt="" coords="202,5,351,32"/>
+<area shape="poly" title=" " alt="" coords="152,32,186,28,187,33,152,37"/>
+<area shape="rect" href="mbport_8h.html#a4a4724e9dc26b2d2d1cc2a6d41c24770" title=" " alt="" coords="200,56,353,83"/>
+<area shape="poly" title=" " alt="" coords="152,51,184,55,184,60,152,56"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a447f45f582daab2600cad612b00120b0_icgraph.png" border="0" usemap="#ambrtu_8h_a447f45f582daab2600cad612b00120b0_icgraph" alt=""/></div>
+<map name="ambrtu_8h_a447f45f582daab2600cad612b00120b0_icgraph" id="ambrtu_8h_a447f45f582daab2600cad612b00120b0_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,265,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5f1ff6643990316db64ebcbcf8419af2" name="a5f1ff6643990316db64ebcbcf8419af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f1ff6643990316db64ebcbcf8419af2">&#9670;&#160;</a></span>xMBRTUTimerT15Expired()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL xMBRTUTimerT15Expired </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6302a8b67c6b82ae49e6c9d6a9795da" name="ac6302a8b67c6b82ae49e6c9d6a9795da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6302a8b67c6b82ae49e6c9d6a9795da">&#9670;&#160;</a></span>xMBRTUTimerT35Expired()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL xMBRTUTimerT35Expired </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00324">324</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  325</span>{</div>
+<div class="line"><span class="lineno">  326</span>    BOOL            xNeedPoll = FALSE;</div>
+<div class="line"><span class="lineno">  327</span> </div>
+<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">switch</span> ( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> )</div>
+<div class="line"><span class="lineno">  329</span>    {</div>
+<div class="line"><span class="lineno">  330</span>        <span class="comment">/* Timer t35 expired. Startup phase is finished. */</span></div>
+<div class="line"><span class="lineno">  331</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba2b2395354f5e0566929bd52408265fb3">STATE_RX_INIT</a>:</div>
+<div class="line"><span class="lineno">  332</span>        xNeedPoll = <a class="code hl_function" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">xMBPortEventPost</a>( <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0">EV_READY</a> );</div>
+<div class="line"><span class="lineno">  333</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>        <span class="comment">/* A frame was received and t35 expired. Notify the listener that</span></div>
+<div class="line"><span class="lineno">  336</span><span class="comment">         * a new frame was received. */</span></div>
+<div class="line"><span class="lineno">  337</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba6489a66156527784ec30b45fc5ffe43b">STATE_RX_RCV</a>:</div>
+<div class="line"><span class="lineno">  338</span>        xNeedPoll = <a class="code hl_function" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">xMBPortEventPost</a>( <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2">EV_FRAME_RECEIVED</a> );</div>
+<div class="line"><span class="lineno">  339</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  340</span> </div>
+<div class="line"><span class="lineno">  341</span>        <span class="comment">/* An error occured while receiving the frame. */</span></div>
+<div class="line"><span class="lineno">  342</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefbafbb71fcd5e10dfbcc33a8f5a00df1f95">STATE_RX_ERROR</a>:</div>
+<div class="line"><span class="lineno">  343</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  344</span> </div>
+<div class="line"><span class="lineno">  345</span>        <span class="comment">/* Function called in an illegal state. */</span></div>
+<div class="line"><span class="lineno">  346</span>    <span class="keywordflow">default</span>:</div>
+<div class="line"><span class="lineno">  347</span>        assert( ( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> == <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba2b2395354f5e0566929bd52408265fb3">STATE_RX_INIT</a> ) ||</div>
+<div class="line"><span class="lineno">  348</span>                ( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> == <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba6489a66156527784ec30b45fc5ffe43b">STATE_RX_RCV</a> ) || ( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> == <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefbafbb71fcd5e10dfbcc33a8f5a00df1f95">STATE_RX_ERROR</a> ) );</div>
+<div class="line"><span class="lineno">  349</span>    }</div>
+<div class="line"><span class="lineno">  350</span> </div>
+<div class="line"><span class="lineno">  351</span>    <a class="code hl_function" href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523">vMBPortTimersDisable</a>(  );</div>
+<div class="line"><span class="lineno">  352</span>    <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> = <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba516714125b01eae93e5cb693fdc3a9e0">STATE_RX_IDLE</a>;</div>
+<div class="line"><span class="lineno">  353</span> </div>
+<div class="line"><span class="lineno">  354</span>    <span class="keywordflow">return</span> xNeedPoll;</div>
+<div class="line"><span class="lineno">  355</span>}</div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02a193382528431aaa562c2ecfee29039c0">EV_READY</a></div><div class="ttdeci">@ EV_READY</div><div class="ttdef"><b>Definition</b> <a href="mbport_8h_source.html#l00042">mbport.h:42</a></div></div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02a5925cb291b7b7a4ec1fdee32aca761a2">EV_FRAME_RECEIVED</a></div><div class="ttdeci">@ EV_FRAME_RECEIVED</div><div class="ttdef"><b>Definition</b> <a href="mbport_8h_source.html#l00043">mbport.h:43</a></div></div>
+<div class="ttc" id="ambport_8h_html_a2cdfe42cd5ee37d5839081c636576e7c"><div class="ttname"><a href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">xMBPortEventPost</a></div><div class="ttdeci">BOOL xMBPortEventPost(eMBEventType eEvent)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_cgraph.png" border="0" usemap="#ambrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_cgraph" alt=""/></div>
+<map name="ambrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_cgraph" id="ambrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,176,57"/>
+<area shape="rect" href="mbport_8h.html#adf96b9d106626e42fa0b7b1a0b802523" title=" " alt="" coords="224,5,376,32"/>
+<area shape="poly" title=" " alt="" coords="176,31,208,27,208,32,176,36"/>
+<area shape="rect" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c" title=" " alt="" coords="234,56,366,83"/>
+<area shape="poly" title=" " alt="" coords="176,52,219,57,218,62,176,57"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_icgraph.png" border="0" usemap="#ambrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_icgraph" alt=""/></div>
+<map name="ambrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_icgraph" id="ambrtu_8h_ac6302a8b67c6b82ae49e6c9d6a9795da_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,289,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a663e5daf0be0f2426a72c531c91d423f" name="a663e5daf0be0f2426a72c531c91d423f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663e5daf0be0f2426a72c531c91d423f">&#9670;&#160;</a></span>xMBRTUTransmitFSM()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL xMBRTUTransmitFSM </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="mbrtu_8c_source.html">mbrtu.c</a> строка <a class="el" href="mbrtu_8c_source.html#l00286">286</a></p>
+<div class="fragment"><div class="line"><span class="lineno">  287</span>{</div>
+<div class="line"><span class="lineno">  288</span>    BOOL            xNeedPoll = FALSE;</div>
+<div class="line"><span class="lineno">  289</span> </div>
+<div class="line"><span class="lineno">  290</span>    assert( <a class="code hl_variable" href="mbrtu_8c.html#acd3c969b4adcde91ff7a9aa4e068be92">eRcvState</a> == <a class="code hl_enumvalue" href="mbrtu_8c.html#ada71af7b20c01523339e4f2ff95feefba516714125b01eae93e5cb693fdc3a9e0">STATE_RX_IDLE</a> );</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>    <span class="keywordflow">switch</span> ( <a class="code hl_variable" href="mbrtu_8c.html#a4cb94211b4ab8c9760ea9b134fab58cf">eSndState</a> )</div>
+<div class="line"><span class="lineno">  293</span>    {</div>
+<div class="line"><span class="lineno">  294</span>        <span class="comment">/* We should not get a transmitter event if the transmitter is in</span></div>
+<div class="line"><span class="lineno">  295</span><span class="comment">         * idle state.  */</span></div>
+<div class="line"><span class="lineno">  296</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefab1bd9fcf7cdb346f72d012adfca4767a">STATE_TX_IDLE</a>:</div>
+<div class="line"><span class="lineno">  297</span>        <span class="comment">/* enable receiver/disable transmitter. */</span></div>
+<div class="line"><span class="lineno">  298</span>        <a class="code hl_function" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a>( TRUE, FALSE );</div>
+<div class="line"><span class="lineno">  299</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  300</span> </div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefa99b8ef6f95d0035f9519dcb2889b3a83">STATE_TX_XMIT</a>:</div>
+<div class="line"><span class="lineno">  302</span>        <span class="comment">/* check if we are finished. */</span></div>
+<div class="line"><span class="lineno">  303</span>        <span class="keywordflow">if</span>( <a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a> != 0 )</div>
+<div class="line"><span class="lineno">  304</span>        {</div>
+<div class="line"><span class="lineno">  305</span>            <a class="code hl_function" href="mbport_8h.html#a5ca95563c25eb239a4c51f3ce35f5cc8">xMBPortSerialPutByte</a>( ( CHAR )*<a class="code hl_variable" href="mbrtu_8c.html#a3c1d4b58733f636b8c083d35472089f7">pucSndBufferCur</a> );</div>
+<div class="line"><span class="lineno">  306</span>            <a class="code hl_variable" href="mbrtu_8c.html#a3c1d4b58733f636b8c083d35472089f7">pucSndBufferCur</a>++;  <span class="comment">/* next byte in sendbuffer. */</span></div>
+<div class="line"><span class="lineno">  307</span>            <a class="code hl_variable" href="mbrtu_8c.html#aaa960901f019f4aada070337f3a98c9c">usSndBufferCount</a>--;</div>
+<div class="line"><span class="lineno">  308</span>        }</div>
+<div class="line"><span class="lineno">  309</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  310</span>        {</div>
+<div class="line"><span class="lineno">  311</span>            xNeedPoll = <a class="code hl_function" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c">xMBPortEventPost</a>( <a class="code hl_enumvalue" href="mbport_8h.html#a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95">EV_FRAME_SENT</a> );</div>
+<div class="line"><span class="lineno">  312</span>            <span class="comment">/* Disable transmitter. This prevents another transmit buffer</span></div>
+<div class="line"><span class="lineno">  313</span><span class="comment">             * empty interrupt. */</span></div>
+<div class="line"><span class="lineno">  314</span>            <a class="code hl_function" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df">vMBPortSerialEnable</a>( TRUE, FALSE );</div>
+<div class="line"><span class="lineno">  315</span>            <a class="code hl_variable" href="mbrtu_8c.html#a4cb94211b4ab8c9760ea9b134fab58cf">eSndState</a> = <a class="code hl_enumvalue" href="mbrtu_8c.html#ac877d5e834a5d5b2f80240c0a90d7fefab1bd9fcf7cdb346f72d012adfca4767a">STATE_TX_IDLE</a>;</div>
+<div class="line"><span class="lineno">  316</span>        }</div>
+<div class="line"><span class="lineno">  317</span>        <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  318</span>    }</div>
+<div class="line"><span class="lineno">  319</span> </div>
+<div class="line"><span class="lineno">  320</span>    <span class="keywordflow">return</span> xNeedPoll;</div>
+<div class="line"><span class="lineno">  321</span>}</div>
+<div class="ttc" id="ambport_8h_html_a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95"><div class="ttname"><a href="mbport_8h.html#a208845596909620aa0062468ff11ef02afa87727a0c06c8ab5e2b5e6ae59cac95">EV_FRAME_SENT</a></div><div class="ttdeci">@ EV_FRAME_SENT</div><div class="ttdef"><b>Definition</b> <a href="mbport_8h_source.html#l00046">mbport.h:45</a></div></div>
+<div class="ttc" id="ambport_8h_html_a5ca95563c25eb239a4c51f3ce35f5cc8"><div class="ttname"><a href="mbport_8h.html#a5ca95563c25eb239a4c51f3ce35f5cc8">xMBPortSerialPutByte</a></div><div class="ttdeci">BOOL xMBPortSerialPutByte(CHAR ucByte)</div></div>
+</div><!-- fragment --><div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a663e5daf0be0f2426a72c531c91d423f_cgraph.png" border="0" usemap="#ambrtu_8h_a663e5daf0be0f2426a72c531c91d423f_cgraph" alt=""/></div>
+<map name="ambrtu_8h_a663e5daf0be0f2426a72c531c91d423f_cgraph" id="ambrtu_8h_a663e5daf0be0f2426a72c531c91d423f_cgraph">
+<area shape="rect" title=" " alt="" coords="5,56,157,83"/>
+<area shape="rect" href="mbport_8h.html#a4bf68bda6b5ed6c341d27d439a6c03df" title=" " alt="" coords="209,5,353,32"/>
+<area shape="poly" title=" " alt="" coords="136,53,210,34,211,39,137,58"/>
+<area shape="rect" href="mbport_8h.html#a2cdfe42cd5ee37d5839081c636576e7c" title=" " alt="" coords="215,56,347,83"/>
+<area shape="poly" title=" " alt="" coords="157,67,200,67,200,72,157,72"/>
+<area shape="rect" href="mbport_8h.html#a5ca95563c25eb239a4c51f3ce35f5cc8" title=" " alt="" coords="205,107,357,133"/>
+<area shape="poly" title=" " alt="" coords="137,81,211,100,210,105,136,86"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="mbrtu_8h_a663e5daf0be0f2426a72c531c91d423f_icgraph.png" border="0" usemap="#ambrtu_8h_a663e5daf0be0f2426a72c531c91d423f_icgraph" alt=""/></div>
+<map name="ambrtu_8h_a663e5daf0be0f2426a72c531c91d423f_icgraph" id="ambrtu_8h_a663e5daf0be0f2426a72c531c91d423f_icgraph">
+<area shape="rect" title=" " alt="" coords="119,5,270,32"/>
+<area shape="rect" href="group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,5,71,32"/>
+<area shape="poly" title=" " alt="" coords="103,21,71,21,71,16,103,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0
+</small></address>
+</body>
+</html>

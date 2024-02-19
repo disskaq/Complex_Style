@@ -1,0 +1,16 @@
+<map id="vMBPortSerialEnable" name="vMBPortSerialEnable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="318,81,461,108"/>
+<area shape="rect" id="Node000002" href="$mbrtu_8c.html#a6feb0c70f52d3ef74da1cfbdc10d1ab0" title=" " alt="" coords="143,5,246,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,77,269,46,237,35,239,30,271,42,345,72"/>
+<area shape="rect" id="Node000004" href="$mbrtu_8c.html#ae342bae030ea291a6e8a2fe3d2d0abeb" title=" " alt="" coords="144,56,245,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="302,86,245,78,246,73,303,81"/>
+<area shape="rect" id="Node000005" href="$mbrtu_8c.html#a3d44ef4747b7202d37142ef1aaea493b" title=" " alt="" coords="144,107,245,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="303,109,245,116,244,111,302,103"/>
+<area shape="rect" id="Node000006" href="$mbrtu_8c.html#a663e5daf0be0f2426a72c531c91d423f" title=" " alt="" coords="119,157,270,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="345,117,271,148,239,159,237,154,269,143,343,112"/>
+<area shape="rect" id="Node000003" href="$group__modbus.html#ga622dbe6b38ff1d255523d4736fa3da26" title="Initialize the Modbus protocol stack." alt="" coords="5,81,71,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="133,40,120,46,60,83,57,79,117,42,131,36"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="129,83,72,92,71,87,128,77"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="128,112,71,103,72,97,129,107"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="131,154,117,148,57,111,60,106,120,143,133,149"/>
+</map>

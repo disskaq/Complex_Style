@@ -1,0 +1,9 @@
+<map id="CommunicatingSocket" name="CommunicatingSocket">
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,80,181,107"/>
+<area shape="rect" id="Node000003" href="$class_t_c_p_socket.html" title=" " alt="" coords="5,155,93,181"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,121,61,156,57,153,84,117"/>
+<area shape="rect" id="Node000004" href="$class_u_d_p_socket.html" title=" " alt="" coords="116,155,206,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,117,153,153,149,156,122,121"/>
+<area shape="rect" id="Node000002" href="$class_socket.html" title=" " alt="" coords="74,5,136,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,48,108,80,102,80,102,48"/>
+</map>
